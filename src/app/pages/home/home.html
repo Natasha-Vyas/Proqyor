@@ -1,0 +1,821 @@
+<div class="home-container">
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
+      <source src="https://cdn.coverr.co/videos/coverr-industrial-machinery-in-a-factory-7535/1080p.mp4" type="video/mp4">
+      <source src="https://cdn.coverr.co/videos/coverr-cnc-machine-working-7867/1080p.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Infrastructure & Manufacturing<br>
+        Solutions Done Right
+      </h1>
+
+      <ul class="hero-features">
+        <li>
+          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Verified manufacturing partners across India</span>
+        </li>
+        <li>
+          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Metal fabrication, electrical, civil & industrial solutions</span>
+        </li>
+        <li>
+          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Quality-assured sourcing and supplier management</span>
+        </li>
+        <li>
+          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Pan-India delivery and project support</span>
+        </li>
+        <li>
+          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>One platform for procurement and manufacturing needs</span>
+        </li>
+      </ul>
+
+      <div class="hero-buttons">
+        <button class="btn btn-primary">
+          Request a Quote
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="btn btn-secondary" routerLink="/contact">
+          Contact Our Team
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="capabilities">
+    <div class="capabilities-header">
+      <h2>Manufacturing Capabilities to Meet Your Needs</h2>
+      <p>We handle custom manufacturing from first prototype to full production, all through one digital manufacturing platform.</p>
+    </div>
+
+    <div class="capabilities-grid">
+      <div class="capability-card">
+        <div class="card-image" (click)="openServiceModal('injection-molding')">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cc527f53-e997-4c34-8193-615e3fd54931_injection%20modeling.jpg" alt="Injection Molding">
+          <div class="hover-cta">Take A Closer Look</div>
+        </div>
+        <h3>Injection Molding Services <span class="arrow">›</span></h3>
+        <p>T1 samples as fast as 10 days with low minimum order quantities.</p>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-image" (click)="openServiceModal('cnc-machining')">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2d00510e-ec24-449f-b5dd-a72df3c19403_CNC%20Machining.jpg" alt="CNC Machining">
+          <div class="hover-cta">Take A Closer Look</div>
+        </div>
+        <h3>CNC Machining Services <span class="arrow">›</span></h3>
+        <p>Tight tolerances and finishing capabilities, as fast as 2 days.</p>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-image" (click)="openServiceModal('3d-printing')">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/6000e91e-697d-4caf-81aa-860243db4d11_3D%20printing%20.jpg" alt="3D Printing">
+          <div class="hover-cta">Take A Closer Look</div>
+        </div>
+        <h3>3D Printing Services <span class="arrow">›</span></h3>
+        <p>FDM, SLS, SLA, PolyJet, MJF technologies.</p>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-image" (click)="openServiceModal('sheet-metal')">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/0336df04-e9db-469d-8953-cf3ad1d2ef6f_Sheet%20Metal.jpg" alt="Sheet Metal">
+          <div class="hover-cta">Take A Closer Look</div>
+        </div>
+        <h3>Sheet Metal Services <span class="arrow">›</span></h3>
+        <p>Experience the versatility & cost efficiency with flexible application options.</p>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-image" (click)="openServiceModal('compression-molding')">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/58592aba-5c52-45cf-90ea-f5330d90fe5d_Compression%20Molding.jpg" alt="Compression Molding">
+          <div class="hover-cta">Take A Closer Look</div>
+        </div>
+        <h3>Compression Molding Services <span class="arrow">›</span></h3>
+        <p>Experience lower tooling costs with high-quality durable parts.</p>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-image" (click)="openServiceModal('urethane-casting')">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/45b75d2e-9888-4ce7-b991-b3bc8967fe63_Urethane%20Casting.jpg" alt="Urethane Casting">
+          <div class="hover-cta">Take A Closer Look</div>
+        </div>
+        <h3>Urethane Casting Services <span class="arrow">›</span></h3>
+        <p>Production quality parts without the tooling investment.</p>
+      </div>
+
+      <div class="capability-card">
+        <div class="card-image" (click)="openServiceModal('die-casting')">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/476b1dd9-f066-45b4-89e4-bc3326b11067_Die%20Casting.jpg" alt="Die Casting">
+          <div class="hover-cta">Take A Closer Look</div>
+        </div>
+        <h3>Die Casting Services <span class="arrow">›</span></h3>
+        <p>Create high quality custom mechanicals with precision and accuracy.</p>
+      </div>
+    </div>
+
+    <div class="capabilities-cta">
+      <button class="cta-button">
+        Get Instant Quote
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="promo-banner">
+    <div class="banner-container">
+      <div class="banner-content">
+        <div class="content-left">
+          <div class="brand-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="36" height="36" stroke="white" stroke-width="2" fill="none"/>
+              <path d="M12 12L28 28M28 12L12 28" stroke="white" stroke-width="2"/>
+            </svg>
+            <div class="brand-text">
+              <div class="brand-name">PROQYUR</div>
+              <div class="brand-subtitle">MANUFACTURING</div>
+            </div>
+          </div>
+
+          <h2 class="banner-headline">Introducing PROQYUR Manufacturing</h2>
+          <p class="banner-subtext">One trusted partner for infrastructure, industrial, and custom manufacturing requirements.</p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Years of Industry Experience</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Manufacturing Partners</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Cities Served Across India</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">1000+</div>
+              <div class="stat-label">Projects & Deliveries Supported</div>
+            </div>
+          </div>
+
+          <button class="banner-cta">
+            Get a Quote
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="content-right">
+          <div class="feature-image">
+            <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
+              <source src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/5ea4319e-f6bb-4852-b1dd-c599eda5b09d_fictiv-misumi.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trusted-partners">
+    <h2>Trusted by Industry Leaders Nationwide</h2>
+    <div class="partners-logos">
+      <div class="partner-logo">
+        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 1</text>
+        </svg>
+      </div>
+      <div class="partner-logo">
+        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 2</text>
+        </svg>
+      </div>
+      <div class="partner-logo">
+        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 3</text>
+        </svg>
+      </div>
+      <div class="partner-logo">
+        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 4</text>
+        </svg>
+      </div>
+      <div class="partner-logo">
+        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 5</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <div class="why-container">
+      <div class="section-intro">
+        <p class="accent-heading">WHY PROQYUR</p>
+        <h2 class="section-title">Complete Procurement & Manufacturing Solutions Under One Roof</h2>
+        <p class="section-description">From sourcing industrial materials to managing manufacturing partners, PROQYUR helps businesses simplify procurement, improve quality, and ensure timely delivery across India.</p>
+      </div>
+
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="card-illustration">
+            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/7a1dd524-b226-4555-a866-3e97c7e463ed_.jpg" alt="Reliable Supply">
+          </div>
+          <h3>Reliable Supply</h3>
+          <p>Access verified suppliers and manufacturing partners for consistent quality and delivery.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="card-illustration">
+            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/6a89aa54-584f-4fcb-ae58-4529f61a3ea5_control.jpg" alt="Project Control">
+          </div>
+          <h3>Project Control</h3>
+          <p>Track sourcing, production, and fulfillment with dedicated support throughout the process.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="card-illustration">
+            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/4979cf27-ab28-4005-a43e-91288812fafa_Cpacity.jpg" alt="Scalable Capacity">
+          </div>
+          <h3>Scalable Capacity</h3>
+          <p>Support projects of any size through our extensive manufacturing and supplier network.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="card-illustration">
+            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/6b81fc50-6b3e-4b66-a739-8fe0249324fd_cost%20down.jpg" alt="Cost Optimization">
+          </div>
+          <h3>Cost Optimization</h3>
+          <p>Reduce procurement costs through strategic sourcing and efficient supplier management.</p>
+        </div>
+      </div>
+
+      <div class="section-cta">
+        <button class="cta-btn" routerLink="/contact">
+          Get Instant Quote
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="platform-section">
+    <div class="platform-container">
+      <div class="platform-content">
+        <div class="content-text">
+          <h2 class="platform-title">One Simple Platform for Procurement & Manufacturing</h2>
+          <p class="platform-description">
+            Manage sourcing, supplier coordination, production tracking, and project delivery through a single platform designed for industrial and infrastructure requirements.
+          </p>
+
+          <ul class="platform-features">
+            <li>
+              <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
+                <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Fast RFQ & quotation management</span>
+            </li>
+            <li>
+              <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
+                <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Verified supplier and manufacturing network</span>
+            </li>
+            <li>
+              <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
+                <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Real-time project and order tracking</span>
+            </li>
+          </ul>
+
+          <button class="platform-cta">
+            Request a Quote
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="content-image">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8b70ab7f-a5bf-4fc1-abf0-1c6ce28c5102_popop.jpg" alt="Platform Interface">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manufacturing-journey">
+    <div class="journey-container">
+      <div class="journey-header">
+        <h2 class="journey-title">Manufacturing What's Next from Start to Scale</h2>
+        <p class="journey-description">
+          We manage supplier quality and global capacity so you get production-grade custom parts you can count on.
+        </p>
+      </div>
+
+      <div class="journey-tabs-wrapper">
+        <div class="journey-tabs">
+          <button
+            class="tab-button"
+            [class.active]="activeTab === 'design'"
+            (click)="setActiveTab('design')">
+            Design
+          </button>
+          <button
+            class="tab-button"
+            [class.active]="activeTab === 'prototyping'"
+            (click)="setActiveTab('prototyping')">
+            Rapid Prototyping
+          </button>
+          <button
+            class="tab-button"
+            [class.active]="activeTab === 'sourcing'"
+            (click)="setActiveTab('sourcing')">
+            Sourcing
+          </button>
+          <button
+            class="tab-button"
+            [class.active]="activeTab === 'planning'"
+            (click)="setActiveTab('planning')">
+            Manufacturing Planning
+          </button>
+          <button
+            class="tab-button"
+            [class.active]="activeTab === 'production'"
+            (click)="setActiveTab('production')">
+            Production
+          </button>
+        </div>
+      </div>
+
+      <div class="journey-content-card">
+        <div class="card-content">
+          <div class="content-left-section">
+            <div class="section-label">{{ getActiveContent().label }}</div>
+
+            <div class="features-section">
+              <h3 class="features-title">{{ getActiveContent().title }}</h3>
+              <ul class="feature-list">
+                <li *ngFor="let feature of getActiveContent().features">
+                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
+                    <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>{{ feature }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-section">
+              <h3 class="tech-title">{{ getActiveContent().techTitle }}</h3>
+              <ul class="tech-list">
+                <li *ngFor="let tech of getActiveContent().techFeatures">
+                  <svg class="check-icon-dark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="#333"/>
+                    <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>{{ tech }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="journey-cta">
+              Get Instant Quote
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="content-right-section">
+            <div class="image-container">
+              <img [src]="getActiveContent().image" [alt]="getActiveContent().label">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="global-network">
+    <div class="network-container">
+      <div class="network-content">
+        <div class="network-video">
+          <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
+            <source src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/bde0c184-a8a3-4ded-a5eb-0be2d80648ab_yr.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="network-info">
+          <div class="network-label">TRUSTED MANUFACTURING NETWORK</div>
+          <h2 class="network-title">One Manufacturing Partner. Nationwide Supply.</h2>
+          <p class="network-description">
+            Proqyur connects businesses with verified manufacturing partners across India for fabrication, electrical systems, civil infrastructure, industrial components, and custom manufacturing solutions.
+          </p>
+
+          <div class="network-stats">
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-text">Years of Industry Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-text">Manufacturing Partners</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-text">Cities Served Across India</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1000+</div>
+              <div class="stat-text">Projects & Deliveries Supported</div>
+            </div>
+          </div>
+
+          <button class="network-cta">
+            Explore Solutions
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise-cards-section">
+    <div class="expertise-cards-container">
+      <div class="expertise-card-item">
+        <div class="expertise-card-media">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39ba7f5e-88e1-417c-ae85-900bf2e905fa_guided%20expertise.jpg" alt="Guided Expertise">
+        </div>
+        <div class="expertise-card-info">
+          <div class="expertise-card-label">GUIDED EXPERTISE</div>
+          <h3 class="expertise-card-heading">AI and Human-Supported Guidance at Every Step</h3>
+        </div>
+        <button class="expertise-expand-button">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="expertise-card-item">
+        <div class="expertise-card-media">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/64f44573-f0c4-4280-9bf2-857dc9aebe7c_FICTIV%20Quality%20Management.jpg" alt="PROQYUR Quality Management">
+        </div>
+        <div class="expertise-card-info">
+          <div class="expertise-card-label">PROQYUR QUALITY MANAGEMENT</div>
+          <h3 class="expertise-card-heading">A Dedicated Team for Dependable Service & Quality</h3>
+        </div>
+        <button class="expertise-expand-button">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="expertise-card-item">
+        <div class="expertise-card-media">
+          <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
+            <source src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/14fa7c87-964c-4636-97c8-8dfff98a733a_team.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="expertise-card-info">
+          <div class="expertise-card-label">PROQYUR TEAMS</div>
+          <h3 class="expertise-card-heading">Collaborative, Team-Based Sourcing</h3>
+        </div>
+        <button class="expertise-expand-button">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="success-stories-section">
+    <div class="stories-header">
+      <div class="stories-label">PROQYUR SUCCESS STORIES</div>
+      <h2 class="stories-title">See Why 61% of the Fortune 500 Manufacture With PROQYUR</h2>
+      <p class="stories-description">You're covered. We manufacture custom parts for leading teams in robotics, aerospace, medtech, automotive, EV & eVTOL, and more.</p>
+    </div>
+
+    <div class="stories-carousel-wrapper">
+      <button class="carousel-nav-button prev-button" (click)="prevStory()">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="stories-carousel-container">
+        <div class="stories-carousel-track" [style.transform]="'translateX(-' + (currentStorySlide * 100) + '%)'">
+          <div class="story-card">
+            <div class="story-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/23ef5429-00b0-4ee8-bf84-0225652792aa_Lunar%20energy.jpg" alt="Lunar Energy">
+              <div class="story-play-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
+                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
+                </svg>
+              </div>
+            </div>
+            <div class="story-content">
+              <div class="story-company">Lunar Energy</div>
+              <div class="story-category">CLEAN TECH</div>
+              <a href="#" class="story-link">View case study</a>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/073bc215-9bf6-474c-a94f-c672bce03fe1_Nightside.jpg" alt="Nightside">
+              <div class="story-play-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
+                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
+                </svg>
+              </div>
+            </div>
+            <div class="story-content">
+              <div class="story-company">Nightside</div>
+              <div class="story-category">CONSUMER PRODUCTS</div>
+              <a href="#" class="story-link">View case study</a>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cbbeb187-de6c-4cb3-bf4a-b2c21194046d_Medical%20device%20manufacture.jpg" alt="Medical Device Manufacturer">
+              <div class="story-play-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
+                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
+                </svg>
+              </div>
+            </div>
+            <div class="story-content">
+              <div class="story-company">Medical Device Manufacturer</div>
+              <div class="story-category">MEDTECH</div>
+              <a href="#" class="story-link">View case study</a>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8088f10f-d435-4c81-a81e-e4acde1f0366_Formula.jpg" alt="Formula Electric Berkeley">
+              <div class="story-play-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
+                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
+                </svg>
+              </div>
+            </div>
+            <div class="story-content">
+              <div class="story-company">Formula Electric Berkeley</div>
+              <div class="story-category">AUTOMOTIVE</div>
+              <a href="#" class="story-link">View case study</a>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3d4e09f0-dae6-4a3c-aa5d-7a86c3c95f59_purecell.jpg" alt="Purcell">
+              <div class="story-play-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
+                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
+                </svg>
+              </div>
+            </div>
+            <div class="story-content">
+              <div class="story-company">Purcell</div>
+              <div class="story-category">CONSUMER PRODUCTS</div>
+              <a href="#" class="story-link">View case study</a>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/16826a0d-bfe1-449f-8185-902c4cd01c34_AIRVINE.JPG" alt="AIRVINE">
+              <div class="story-play-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
+                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
+                </svg>
+              </div>
+            </div>
+            <div class="story-content">
+              <div class="story-company">AIRVINE</div>
+              <div class="story-category">TECHNOLOGY</div>
+              <a href="#" class="story-link">View case study</a>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-image">
+              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/48285cce-d6c0-4174-b8bc-b4e017e3d132_Mchel%20hair%20care.jpg" alt="m'Chel Hair Care">
+              <div class="story-play-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
+                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
+                </svg>
+              </div>
+            </div>
+            <div class="story-content">
+              <div class="story-company">m'Chel Hair Care</div>
+              <div class="story-category">CLEAN TECH</div>
+              <a href="#" class="story-link">View case study</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-nav-button next-button" (click)="nextStory()">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="carousel-dots">
+      <button *ngFor="let dot of storyDots; let i = index"
+              class="dot"
+              [class.active]="i === currentStorySlide"
+              (click)="goToStorySlide(i)">
+      </button>
+    </div>
+  </section>
+
+  <section class="testimonial-section-dark">
+    <div class="testimonial-container-main">
+      <div class="testimonial-content-grid">
+        <div class="testimonial-text-side">
+          <div class="testimonial-stars-row">
+            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+
+          <blockquote class="testimonial-quote-text">
+            "The difference that PROQYUR offers is fast turnaround time. I have a concept in my head, upload it to the platform, and receive production-ready parts in days."
+          </blockquote>
+
+          <div class="testimonial-customer-info">
+            <div class="testimonial-customer-name">Joe Tedesco</div>
+            <div class="testimonial-customer-role">Lead Aerospace Engineer, Heliospace</div>
+          </div>
+        </div>
+
+        <div class="testimonial-image-side">
+          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39ba7f5e-88e1-417c-ae85-900bf2e905fa_guided%20expertise.jpg" alt="Joe Tedesco - Heliospace">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner-section">
+    <div class="cta-banner-container">
+      <h2 class="cta-banner-heading">Let's build something great, together.</h2>
+      <p class="cta-banner-subheading">Upload your design and we'll get you sourcing custom parts right away.</p>
+      <button class="cta-banner-button">
+        Get Instant Quote
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <app-service-modal
+    [isOpen]="isModalOpen"
+    [currentServiceId]="selectedServiceId"
+    (closeModal)="closeServiceModal()"
+  ></app-service-modal>
+
+  <footer class="footer-main-wrapper">
+    <div class="footer-main-content">
+      <div class="footer-content-container">
+        <div class="footer-left-container">
+          <div class="footer-locations-col">
+            <div class="footer-brand-section">
+              <div class="footer-brand-name">Proqyur</div>
+              <p class="footer-brand-description">One manufacturing partner for everything your infrastructure project needs. Hyderabad-based. 10+ years in construction & manufacturing. 50+ companies. 10 cities.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right-container">
+          <div class="footer-nav-columns">
+            <div class="footer-links-col">
+              <h4>PRODUCTS</h4>
+              <ul>
+                <li><a href="#">Metal Fabrication</a></li>
+                <li><a href="#">Concrete Products</a></li>
+                <li><a href="#">Electrical & Cables</a></li>
+                <li><a href="#">Precision Parts</a></li>
+                <li><a href="#">Fasteners & Hardware</a></li>
+                <li><a href="#">Pipes & Fittings</a></li>
+                <li><a href="#">Solar Mounting</a></li>
+                <li><a href="#">Road & Civil Hardware</a></li>
+                <li><a href="#">Custom Manufacturing</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-col">
+              <h4>SECTORS</h4>
+              <ul>
+                <li><a href="#">Roads & Highways</a></li>
+                <li><a href="#">Railways</a></li>
+                <li><a href="#">Solar Energy</a></li>
+                <li><a href="#">Wind Energy</a></li>
+                <li><a href="#">Data Centers</a></li>
+                <li><a href="#">Civil Construction</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-col">
+              <h4>COMPANY</h4>
+              <ul>
+                <li><a href="#">Why Proqyur</a></li>
+                <li><a href="#">How We Work</a></li>
+                <li><a href="#">Our Numbers</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-newsletter-inline">
+            <h3>Join our newsletter</h3>
+            <p>Stay up to date with the latest news, announcements, and articles.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Business Email*" class="newsletter-input">
+              <button class="newsletter-button">Subscribe</button>
+            </div>
+            <p class="newsletter-disclaimer">By signing up, you agree to our Terms of Use and Privacy Policy. We may use the info you submit to contact you and use data from third parties to personalize your experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-container">
+        <div class="footer-copyright">
+          <p>© 2026 Proqyur. All rights reserved. Hyderabad, Telangana.</p>
+        </div>
+
+        <div class="footer-certifications">
+          <span>IS 2062</span>
+          <span>IS 1367</span>
+          <span>RDSO</span>
+          <span>GST</span>
+          <span>MSME</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
