@@ -92,12 +92,12 @@
 
   &:hover {
     color: #333;
-    background: rgba(45, 212, 191, 0.05);
+    background: rgba(124, 58, 237, 0.05);
   }
 
   &.active {
-    color: #2dd4bf;
-    border-bottom-color: #2dd4bf;
+    color: #7C3AED;
+    border-bottom-color: #7C3AED;
     font-weight: 600;
   }
 }
@@ -155,7 +155,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #2dd4bf;
+  color: #7C3AED;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -169,7 +169,7 @@
   }
 
   &:hover {
-    color: #25b9a7;
+    color: #6D28D9;
 
     svg {
       transform: translate(2px, -2px);
@@ -275,7 +275,7 @@
 .quote-button {
   align-self: flex-start;
   padding: 0.8125rem 1.875rem;
-  background: #2dd4bf;
+  background: #7C3AED;
   color: #ffffff;
   border: none;
   border-radius: 0.25rem;
@@ -286,9 +286,9 @@
   font-family: inherit;
 
   &:hover {
-    background: #25b9a7;
+    background: #6D28D9;
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(45, 212, 191, 0.35);
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);
   }
 }
 
@@ -319,7 +319,7 @@
   svg {
     width: 36px;
     height: 36px;
-    color: #2dd4bf;
+    color: #7C3AED;
     stroke-width: 1.8;
   }
 }
@@ -334,7 +334,7 @@
   .trust-number {
     font-size: 1.375rem;
     font-weight: 700;
-    color: #2dd4bf;
+    color: #7C3AED;
     line-height: 1.2;
   }
 

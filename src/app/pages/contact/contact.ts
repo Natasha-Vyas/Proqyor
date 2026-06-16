@@ -11,8 +11,9 @@ import { CommonModule } from '@angular/common';
 export class ContactComponent {
   protected contactForm = {
     name: '',
-    email: '',
-    subject: '',
+    company: '',
+    phone: '',
+    category: '',
     message: ''
   };
 
@@ -32,8 +33,7 @@ export class ContactComponent {
   isFormValid(): boolean {
     return !!(
       this.contactForm.name &&
-      this.contactForm.email &&
-      this.contactForm.subject &&
+      this.contactForm.phone &&
       this.contactForm.message
     );
   }
@@ -41,8 +41,9 @@ export class ContactComponent {
   resetForm() {
     this.contactForm = {
       name: '',
-      email: '',
-      subject: '',
+      company: '',
+      phone: '',
+      category: '',
       message: ''
     };
     this.submitted = false;

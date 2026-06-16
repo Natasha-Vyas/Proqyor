@@ -1,51 +1,89 @@
 <div class="home-container">
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
-      <source src="https://cdn.coverr.co/videos/coverr-industrial-machinery-in-a-factory-7535/1080p.mp4" type="video/mp4">
-      <source src="https://cdn.coverr.co/videos/coverr-cnc-machine-working-7867/1080p.mp4" type="video/mp4">
-    </video>
+    <div class="hero-animated-bg">
+      <div class="hero-grid-lines"></div>
+      <div class="hero-pulse-ring ring-1"></div>
+      <div class="hero-pulse-ring ring-2"></div>
+      <div class="hero-pulse-ring ring-3"></div>
+      <div class="hero-moving-dot dot-h-1"></div>
+      <div class="hero-moving-dot dot-h-2"></div>
+      <div class="hero-moving-dot dot-h-3"></div>
+      <div class="hero-moving-dot dot-v-1"></div>
+      <div class="hero-moving-dot dot-v-2"></div>
+      <svg class="hero-circuit-svg" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 400 H300 L350 350 H500" stroke="rgba(124,58,237,0.15)" stroke-width="1" class="circuit-path cp-1"/>
+        <path d="M1200 200 H900 L850 250 H700" stroke="rgba(124,58,237,0.12)" stroke-width="1" class="circuit-path cp-2"/>
+        <path d="M0 600 H200 L250 550 H450 L500 600 H700" stroke="rgba(124,58,237,0.1)" stroke-width="1" class="circuit-path cp-3"/>
+        <path d="M1200 650 H1000 L950 600 H800" stroke="rgba(124,58,237,0.12)" stroke-width="1" class="circuit-path cp-4"/>
+        <circle cx="500" cy="350" r="4" fill="#7C3AED" opacity="0.4" class="circuit-node cn-1"/>
+        <circle cx="700" cy="250" r="4" fill="#7C3AED" opacity="0.4" class="circuit-node cn-2"/>
+        <circle cx="300" cy="400" r="3" fill="#7C3AED" opacity="0.3" class="circuit-node cn-3"/>
+        <circle cx="700" cy="600" r="3" fill="#7C3AED" opacity="0.3" class="circuit-node cn-4"/>
+      </svg>
+    </div>
     <div class="hero-overlay"></div>
+    <div class="floating-particles">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+    </div>
     <div class="hero-content">
+      <div class="hero-badge">
+        <span>10+ Years</span>
+        <span class="hero-badge-dot"></span>
+        <span>3 Facilities</span>
+        <span class="hero-badge-dot"></span>
+        <span>Pan-India Delivery</span>
+      </div>
+
       <h1 class="hero-title">
-        Infrastructure & Manufacturing<br>
-        Solutions Done Right
+        <span class="hero-title-line">One manufacturing</span>
+        <span class="hero-title-line">partner for everything</span>
+        <span class="hero-title-accent">your project needs.</span>
       </h1>
+
+      <p class="hero-subtitle">We source and manufacture precision-engineered components, fabricated items, furniture, and materials — so your business gets the right quality at the right price. Backed by our own facilities in Kalakal, Cherlapally, and Maheshwaram.</p>
 
       <ul class="hero-features">
         <li>
-          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Verified manufacturing partners across India</span>
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Own manufacturing facilities</span>
         </li>
         <li>
-          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Metal fabrication, electrical, civil & industrial solutions</span>
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Certified mills & partner workshops</span>
         </li>
         <li>
-          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Quality-assured sourcing and supplier management</span>
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>Quality control & documentation</span>
         </li>
         <li>
-          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Pan-India delivery and project support</span>
-        </li>
-        <li>
-          <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>One platform for procurement and manufacturing needs</span>
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="3" stroke="#7C3AED" stroke-width="2"/>
+              <path d="M12 1v6m0 6v6M23 12h-6m-6 0H1" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span>Custom fabrication to any drawing</span>
         </li>
       </ul>
 
       <div class="hero-buttons">
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" routerLink="/contact">
           Request a Quote
           <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -58,268 +96,827 @@
           </svg>
         </button>
       </div>
+
+      <div class="hero-trust-line">
+        <span>Kalakal</span>
+        <span class="hero-badge-dot"></span>
+        <span>Cherlapally</span>
+        <span class="hero-badge-dot"></span>
+        <span>Maheshwaram</span>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <section class="capabilities">
-    <div class="capabilities-header">
-      <h2>Manufacturing Capabilities to Meet Your Needs</h2>
-      <p>We handle custom manufacturing from first prototype to full production, all through one digital manufacturing platform.</p>
+  <section class="divisions">
+    <div class="divisions-bg-anim">
+      <div class="div-bg-grid"></div>
+      <div class="div-bg-orb div-orb-1"></div>
+      <div class="div-bg-orb div-orb-2"></div>
+      <div class="div-bg-orb div-orb-3"></div>
     </div>
-
-    <div class="capabilities-grid">
-      <div class="capability-card">
-        <div class="card-image" (click)="openServiceModal('injection-molding')">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cc527f53-e997-4c34-8193-615e3fd54931_injection%20modeling.jpg" alt="Injection Molding">
-          <div class="hover-cta">Take A Closer Look</div>
-        </div>
-        <h3>Injection Molding Services <span class="arrow">›</span></h3>
-        <p>T1 samples as fast as 10 days with low minimum order quantities.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="card-image" (click)="openServiceModal('cnc-machining')">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2d00510e-ec24-449f-b5dd-a72df3c19403_CNC%20Machining.jpg" alt="CNC Machining">
-          <div class="hover-cta">Take A Closer Look</div>
-        </div>
-        <h3>CNC Machining Services <span class="arrow">›</span></h3>
-        <p>Tight tolerances and finishing capabilities, as fast as 2 days.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="card-image" (click)="openServiceModal('3d-printing')">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/6000e91e-697d-4caf-81aa-860243db4d11_3D%20printing%20.jpg" alt="3D Printing">
-          <div class="hover-cta">Take A Closer Look</div>
-        </div>
-        <h3>3D Printing Services <span class="arrow">›</span></h3>
-        <p>FDM, SLS, SLA, PolyJet, MJF technologies.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="card-image" (click)="openServiceModal('sheet-metal')">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/0336df04-e9db-469d-8953-cf3ad1d2ef6f_Sheet%20Metal.jpg" alt="Sheet Metal">
-          <div class="hover-cta">Take A Closer Look</div>
-        </div>
-        <h3>Sheet Metal Services <span class="arrow">›</span></h3>
-        <p>Experience the versatility & cost efficiency with flexible application options.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="card-image" (click)="openServiceModal('compression-molding')">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/58592aba-5c52-45cf-90ea-f5330d90fe5d_Compression%20Molding.jpg" alt="Compression Molding">
-          <div class="hover-cta">Take A Closer Look</div>
-        </div>
-        <h3>Compression Molding Services <span class="arrow">›</span></h3>
-        <p>Experience lower tooling costs with high-quality durable parts.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="card-image" (click)="openServiceModal('urethane-casting')">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/45b75d2e-9888-4ce7-b991-b3bc8967fe63_Urethane%20Casting.jpg" alt="Urethane Casting">
-          <div class="hover-cta">Take A Closer Look</div>
-        </div>
-        <h3>Urethane Casting Services <span class="arrow">›</span></h3>
-        <p>Production quality parts without the tooling investment.</p>
-      </div>
-
-      <div class="capability-card">
-        <div class="card-image" (click)="openServiceModal('die-casting')">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/476b1dd9-f066-45b4-89e4-bc3326b11067_Die%20Casting.jpg" alt="Die Casting">
-          <div class="hover-cta">Take A Closer Look</div>
-        </div>
-        <h3>Die Casting Services <span class="arrow">›</span></h3>
-        <p>Create high quality custom mechanicals with precision and accuracy.</p>
-      </div>
-    </div>
-
-    <div class="capabilities-cta">
-      <button class="cta-button">
-        Get Instant Quote
+    <div class="animated-shapes">
+      <div class="shape shape-gear">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="1"/>
+          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" stroke-width="1"/>
         </svg>
-      </button>
+      </div>
+      <div class="shape shape-bolt">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="shape shape-cube">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1"/>
+          <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="shape shape-wrench">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="shape shape-factory">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 20h20M4 20V10l4 3V10l4 3V10l4 3V4h4v16" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <div class="divisions-header">
+      <span class="divisions-label">
+        <span class="label-pulse"></span>
+        OUR MANUFACTURING DIVISIONS
+      </span>
+      <h2>Comprehensive manufacturing.<br>Built to spec. <span class="text-highlight">Every time.</span></h2>
+      <p>From structural steel to furniture & interiors — we manufacture, source, and deliver from our own facilities directly to your project site.</p>
+      <div class="divisions-header-visual">
+        <svg viewBox="0 0 600 60" class="header-line-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30 H180 L200 10 H250 L270 30 H330 L350 50 H400 L420 30 H600" stroke="url(#divGrad)" stroke-width="2" class="animated-line"/>
+          <circle cx="200" cy="10" r="4" fill="#7C3AED" class="line-node"/>
+          <circle cx="350" cy="50" r="4" fill="#a78bfa" class="line-node node-2"/>
+          <circle cx="270" cy="30" r="3" fill="#7C3AED" class="line-node node-3"/>
+          <defs>
+            <linearGradient id="divGrad" x1="0" y1="0" x2="600" y2="0">
+              <stop offset="0%" stop-color="transparent"/>
+              <stop offset="30%" stop-color="#7C3AED"/>
+              <stop offset="70%" stop-color="#a78bfa"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="divisions-grid">
+      <div class="division-card">
+        <div class="division-card-top">
+          <span class="division-badge">We Manufacture · In-house</span>
+          <a routerLink="/contact" class="division-arrow">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="division-icon division-icon-animated">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="card-anim-svg">
+            <!-- Factory body -->
+            <rect x="8" y="38" width="64" height="34" rx="3" fill="#3B82F6" opacity="0.15"/>
+            <rect x="8" y="38" width="64" height="34" rx="3" fill="none" stroke="#3B82F6" stroke-width="2"/>
+            <!-- Roofs -->
+            <polygon points="12,38 28,16 44,38" fill="#F59E0B" opacity="0.2"/>
+            <polygon points="12,38 28,16 44,38" fill="none" stroke="#F59E0B" stroke-width="2"/>
+            <polygon points="38,38 52,22 66,38" fill="#F59E0B" opacity="0.15"/>
+            <polygon points="38,38 52,22 66,38" fill="none" stroke="#F59E0B" stroke-width="1.5"/>
+            <!-- Windows -->
+            <rect x="18" y="46" width="12" height="10" rx="2" fill="#60A5FA" class="card-window cw-1"/>
+            <rect x="34" y="46" width="12" height="10" rx="2" fill="#60A5FA" class="card-window cw-2"/>
+            <rect x="50" y="46" width="12" height="10" rx="2" fill="#60A5FA" class="card-window cw-3"/>
+            <!-- Chimney smoke -->
+            <rect x="56" y="24" width="6" height="14" fill="#6B7280"/>
+            <circle cx="59" cy="18" r="4" fill="#9CA3AF" opacity="0.7" class="card-smoke cs-1"/>
+            <circle cx="62" cy="12" r="3" fill="#9CA3AF" opacity="0.4" class="card-smoke cs-2"/>
+            <!-- Sparks -->
+            <circle cx="28" cy="12" r="2.5" fill="#EF4444" class="card-spark csp-1"/>
+            <circle cx="32" cy="8" r="1.5" fill="#F59E0B" class="card-spark csp-2"/>
+            <!-- Conveyor -->
+            <rect x="12" y="64" width="56" height="4" rx="2" fill="#6B7280" opacity="0.4"/>
+            <circle cx="22" cy="66" r="2.5" fill="#F59E0B" class="card-spark csp-1"/>
+            <circle cx="40" cy="66" r="2.5" fill="#EF4444" class="card-spark csp-2"/>
+            <circle cx="58" cy="66" r="2.5" fill="#10B981" class="card-spark csp-1"/>
+          </svg>
+        </div>
+        <h3>Structural Steel & Fabrication</h3>
+        <p>PEB frames, structural columns, trusses, pipe racks, industrial sheds, mezzanine floors, bollards, railings — IS 2062 / IS 800 certified.</p>
+        <div class="division-card-footer">
+          <a routerLink="/contact" class="division-link">200+ Products
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <button class="closer-look-btn" (click)="openDivisionPopup('metal')">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Take a closer look
+          </button>
+        </div>
+      </div>
+
+      <div class="division-card">
+        <div class="division-card-top">
+          <span class="division-badge">Railway & Highway · RDSO</span>
+          <a routerLink="/contact" class="division-arrow">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="division-icon division-icon-animated">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="card-anim-svg">
+            <!-- Concrete blocks stacked -->
+            <rect x="8" y="48" width="28" height="24" rx="2" fill="#94A3B8" opacity="0.3"/>
+            <rect x="8" y="48" width="28" height="24" rx="2" fill="none" stroke="#64748B" stroke-width="2" class="concrete-block cb-1"/>
+            <rect x="24" y="32" width="28" height="24" rx="2" fill="#CBD5E1" opacity="0.3"/>
+            <rect x="24" y="32" width="28" height="24" rx="2" fill="none" stroke="#64748B" stroke-width="2" class="concrete-block cb-2"/>
+            <rect x="44" y="44" width="28" height="28" rx="2" fill="#E2E8F0" opacity="0.3"/>
+            <rect x="44" y="44" width="28" height="28" rx="2" fill="none" stroke="#64748B" stroke-width="2" class="concrete-block cb-3"/>
+            <!-- Block texture lines -->
+            <path d="M12 58 H32" stroke="#94A3B8" stroke-width="1"/>
+            <path d="M28 42 H48" stroke="#94A3B8" stroke-width="1"/>
+            <path d="M48 56 H68" stroke="#94A3B8" stroke-width="1"/>
+            <!-- Crane hook -->
+            <path d="M55 8 V20" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+            <path d="M50 20 Q55 26 60 20" stroke="#F59E0B" stroke-width="2" fill="none" class="concrete-arrow"/>
+            <!-- Rotating indicator -->
+            <circle cx="20" cy="20" r="10" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.4" class="concrete-circle"/>
+            <circle cx="20" cy="20" r="3" fill="#3B82F6" opacity="0.6"/>
+            <path d="M20 10 V14" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+            <path d="M20 26 V30" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+            <!-- Safety helmet -->
+            <path d="M60 10 Q65 4 70 10" stroke="#EF4444" stroke-width="2" fill="#EF4444" opacity="0.3"/>
+            <rect x="59" y="10" width="12" height="3" rx="1" fill="#EF4444" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3>Railway & Highway Infrastructure</h3>
+        <p>RCC U-Ducts, W-Ducts, relay racks, signal plates, marker boards, crash barriers, sign gantries, toll plaza structures — RDSO compliant.</p>
+        <div class="division-card-footer">
+          <a routerLink="/contact" class="division-link">80+ Products
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <button class="closer-look-btn" (click)="openDivisionPopup('concrete')">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Take a closer look
+          </button>
+        </div>
+      </div>
+
+      <div class="division-card">
+        <div class="division-card-top">
+          <span class="division-badge">Interiors & Electrical · Turnkey</span>
+          <a routerLink="/contact" class="division-arrow">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <div class="division-icon division-icon-animated">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="card-anim-svg">
+            <!-- Outer ring -->
+            <circle cx="40" cy="40" r="28" fill="none" stroke="#6366F1" stroke-width="2" opacity="0.3"/>
+            <circle cx="40" cy="40" r="28" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5 3" class="precision-rotate"/>
+            <!-- Middle ring -->
+            <circle cx="40" cy="40" r="18" fill="#6366F1" opacity="0.06"/>
+            <circle cx="40" cy="40" r="18" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.5"/>
+            <!-- Center target -->
+            <circle cx="40" cy="40" r="6" fill="#EF4444" opacity="0.2"/>
+            <circle cx="40" cy="40" r="6" fill="none" stroke="#EF4444" stroke-width="2"/>
+            <circle cx="40" cy="40" r="2" fill="#EF4444"/>
+            <!-- Crosshairs -->
+            <path d="M40 8 V18" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+            <path d="M40 62 V72" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 40 H18" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+            <path d="M62 40 H72" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+            <!-- Diagonal markers -->
+            <path d="M17 17 L23 23" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M57 57 L63 63" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M17 63 L23 57" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M57 23 L63 17" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Measurement dots -->
+            <circle cx="40" cy="12" r="2" fill="#10B981"/>
+            <circle cx="40" cy="68" r="2" fill="#10B981"/>
+            <circle cx="12" cy="40" r="2" fill="#10B981"/>
+            <circle cx="68" cy="40" r="2" fill="#10B981"/>
+          </svg>
+        </div>
+        <h3>Furniture, Interiors & Electrical</h3>
+        <p>Modular kitchens, wardrobes, doors, windows, UPVC, ACP cladding, cable trays, LT panels, server racks — complete turnkey solutions.</p>
+        <div class="division-card-footer">
+          <a routerLink="/contact" class="division-link">100+ Products
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <button class="closer-look-btn" (click)="openDivisionPopup('precision')">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Take a closer look
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="also-manufactured">
+      <h4>Also Manufactured & Supplied</h4>
+      <div class="also-grid">
+        <div class="also-item">
+          <span class="also-icon">🔩</span>
+          <span>CNC & Precision Parts</span>
+        </div>
+        <div class="also-item">
+          <span class="also-icon">🪨</span>
+          <span>Stone, Cladding & Hardscaping</span>
+        </div>
+        <div class="also-item">
+          <span class="also-icon">⚡</span>
+          <span>Data Centre Infrastructure</span>
+        </div>
+        <div class="also-item">
+          <span class="also-icon">☀️</span>
+          <span>Solar & Electrical Works</span>
+        </div>
+        <div class="also-item">
+          <span class="also-icon">🚰</span>
+          <span>Mechanical & Industrial</span>
+        </div>
+        <div class="also-item also-item-cta">
+          <span class="also-icon">➕</span>
+          <a routerLink="/contact">Custom Manufacturing</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="certifications-strip">
+      <div class="cert-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>IS 2062</span>
+      </div>
+      <div class="cert-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>IS 1367</span>
+      </div>
+      <div class="cert-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>IS 3614</span>
+      </div>
+      <div class="cert-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12l2 2 4-4M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>RDSO</span>
+      </div>
+      <div class="cert-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12l2 2 4-4M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>GST</span>
+      </div>
+      <div class="cert-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12l2 2 4-4M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>MSME</span>
+      </div>
+      <div class="cert-item">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>10+ Years</span>
+      </div>
+    </div>
+
+    <!-- Division Detail Popup -->
+    <div class="division-popup-overlay" *ngIf="activeDivisionPopup" (click)="closeDivisionPopup()">
+      <div class="division-popup" (click)="$event.stopPropagation()">
+        <button class="popup-close" (click)="closeDivisionPopup()">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="popup-content" *ngIf="activeDivisionPopup === 'metal'">
+          <div class="popup-header">
+            <span class="popup-badge">We Manufacture · In-house</span>
+            <h2>Structural Steel & Fabrication</h2>
+            <p class="popup-subtitle">Design, fabrication, supply, and erection of structural steel, PEB frames, industrial infrastructure, and heavy fabrication — from our facilities in Kalakal, Cherlapally, and Maheshwaram.</p>
+          </div>
+          <div class="popup-body">
+            <div class="popup-stats">
+              <div class="popup-stat"><strong>200+</strong><span>Products</span></div>
+              <div class="popup-stat"><strong>3</strong><span>Facilities</span></div>
+              <div class="popup-stat"><strong>27+</strong><span>Iconic Projects</span></div>
+            </div>
+            <div class="popup-products">
+              <h4>Categories We Cover</h4>
+              <ul>
+                <li>Structural Steel & PEB — Columns, Beams, Trusses, PEB Frames, Mezzanine Floors, Industrial Sheds, Warehouse Frames</li>
+                <li>Highways & Infrastructure — Flyover Girders, Bridge Deck Frames, Sign Gantries, Toll Plaza Structures, Crash Barriers, Lighting Poles</li>
+                <li>Mechanical & Industrial — Cooling Tower Structures, Pipe Racks, Equipment Skids, Compressor/Pump Skids, Boiler Support Frames</li>
+                <li>Cable Management — Ladder Type Trays, Perforated Trays, Wire Mesh Baskets, Cable Raceways, Cable Ducts</li>
+                <li>Doors, Windows & Facades — UPVC, Aluminium, Glass Curtain Walls, Fire Doors, ACP & HPL Cladding, Decorative Laser Panels</li>
+                <li>Heavy Fabrication — SS/MS Tanks, Dished Ends, Expansion Bellows, Storage & Reaction Vessels, Heat Exchangers</li>
+                <li>Fixing & Earthing — Cable Cleats, Strut Channels, Threaded Rods, Floor Cutout Frames, Gratings, Seismic Bracing</li>
+              </ul>
+            </div>
+            <div class="popup-features">
+              <h4>Standards & Capabilities</h4>
+              <div class="popup-feature-grid">
+                <div class="popup-feature-item">
+                  <span class="pf-icon">📋</span>
+                  <span>IS 2062 / IS 800 / IS 3614 Compliant</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🔩</span>
+                  <span>Grade 4.6 to 10.9 Fasteners</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🛡️</span>
+                  <span>Hot-dip Galvanizing / HDG</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🎨</span>
+                  <span>Epoxy / Powder Coat / PU Finishes</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🔬</span>
+                  <span>RITES Inspection & Certification</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">⚙️</span>
+                  <span>CNC Plasma / Laser / Waterjet Cutting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-cta">
+            <button class="popup-cta-btn" routerLink="/contact" (click)="closeDivisionPopup()">Request Quote for Structural Steel</button>
+          </div>
+        </div>
+
+        <div class="popup-content" *ngIf="activeDivisionPopup === 'concrete'">
+          <div class="popup-header">
+            <span class="popup-badge">Railway & Highway · RDSO</span>
+            <h2>Railway & Highway Infrastructure</h2>
+            <p class="popup-subtitle">RDSO-compliant railway products and IRC-standard highway infrastructure — from cable protection to signaling components.</p>
+          </div>
+          <div class="popup-body">
+            <div class="popup-stats">
+              <div class="popup-stat"><strong>80+</strong><span>Products</span></div>
+              <div class="popup-stat"><strong>RDSO</strong><span>Compliant</span></div>
+              <div class="popup-stat"><strong>15+</strong><span>Railway Projects</span></div>
+            </div>
+            <div class="popup-products">
+              <h4>Key Products</h4>
+              <ul>
+                <li>RCC U-Duct — Cable protection, U-shaped profile, high strength, RDSO design</li>
+                <li>RCC W-Duct — Multi-cable routing, heavy-duty durability</li>
+                <li>Route Markers — High-visibility display, weather-resistant, permanent marking</li>
+                <li>Location Box — Secure signaling hub housing, IP-rated protection</li>
+                <li>Cable Termination Rack — Organized routing, high-density capacity</li>
+                <li>Relay Rack — Precision frame, railway-standard compliance, vibration resistant</li>
+                <li>Marker Boards (A, C, G & AG) — Retro-reflective, railway standard symbols</li>
+                <li>Signal Number Plates — Legible contrast, corrosion resistant, custom numbering</li>
+                <li>Arrow Boards — Clear direction indicators, weatherproof, RHS signals</li>
+                <li>Earthing Pit — RCC build quality, maintenance-ready, grounding system</li>
+              </ul>
+            </div>
+            <div class="popup-features">
+              <h4>Also Supplied</h4>
+              <div class="popup-feature-grid">
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🚆</span>
+                  <span>Aluminium Ladders & MS Railings</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">☀️</span>
+                  <span>Solar Panels & Electrical Works</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">📹</span>
+                  <span>CCTV & Surveillance Systems</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🚧</span>
+                  <span>Fencing & Perimeter Security</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🚪</span>
+                  <span>Heavy-duty Metal/AL Doors</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🔧</span>
+                  <span>Custom MS/SS Fabrication Works</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-cta">
+            <button class="popup-cta-btn" routerLink="/contact" (click)="closeDivisionPopup()">Request Quote for Railway Infrastructure</button>
+          </div>
+        </div>
+
+        <div class="popup-content" *ngIf="activeDivisionPopup === 'precision'">
+          <div class="popup-header">
+            <span class="popup-badge">Interiors & Electrical · Turnkey</span>
+            <h2>Furniture, Interiors & Electrical</h2>
+            <p class="popup-subtitle">Complete interior fit-out and electrical infrastructure — from modular furniture to LT panels, server racks, and data centre solutions.</p>
+          </div>
+          <div class="popup-body">
+            <div class="popup-stats">
+              <div class="popup-stat"><strong>100+</strong><span>Products</span></div>
+              <div class="popup-stat"><strong>IP55</strong><span>Panel Rating</span></div>
+              <div class="popup-stat"><strong>Turnkey</strong><span>Execution</span></div>
+            </div>
+            <div class="popup-products">
+              <h4>Key Products</h4>
+              <ul>
+                <li>Furniture — Modular Kitchens, Wardrobes, Office Desks, Workstations, Beds, Chairs, Sofas</li>
+                <li>Doors & Windows — Wooden, Metal, Flush, Fire Doors (IS 3614), UPVC, Aluminium Profiles</li>
+                <li>Cladding & Facades — ACP Panels, HPL Cladding, Glass Curtain Walls, Decorative Laser Panels</li>
+                <li>Flooring & Finishes — Stone Flooring, Epoxy/PU Flooring, False Ceilings, Waterproofing, Tiling</li>
+                <li>Electrical — Cable Trays, LT Panels, Server Racks, Distribution Boards, Conduit Pipes</li>
+                <li>Data Centre — Raised Floor Panels, Hot/Cold Aisle Containment, PDU Frames, Seismic Bracing</li>
+                <li>Stone & Hardscaping — Dry/Wet Cladding, Cobblestones, Paving, Water Bodies, Stone Bathtubs</li>
+              </ul>
+            </div>
+            <div class="popup-features">
+              <h4>Capabilities</h4>
+              <div class="popup-feature-grid">
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🏠</span>
+                  <span>Factory-made Modular Furniture</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🔥</span>
+                  <span>Fire-rated Doors (30/60/120 min)</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">💻</span>
+                  <span>19" Server Racks & Enclosures</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🪨</span>
+                  <span>Custom Stone Cutting & Polishing</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">🎨</span>
+                  <span>Interior/Exterior/Industrial Painting</span>
+                </div>
+                <div class="popup-feature-item">
+                  <span class="pf-icon">⚡</span>
+                  <span>Full Electrical Turnkey Execution</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-cta">
+            <button class="popup-cta-btn" routerLink="/contact" (click)="closeDivisionPopup()">Request Quote for Interiors & Electrical</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="by-the-numbers">
+    <div class="floating-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="numbers-header">
+      <span class="numbers-label">BY THE NUMBERS</span>
+      <h2>Built at scale.<br>Proven in the field.</h2>
+    </div>
+    <div class="numbers-grid">
+      <div class="number-card">
+        <div class="number-icon">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 4C11.16 4 4 11.16 4 20s7.16 16 16 16 16-7.16 16-16S28.84 4 20 4zm0 28c-6.63 0-12-5.37-12-12S13.37 8 20 8s12 5.37 12 12-5.37 12-12 12z" fill="currentColor" opacity="0.3"/><path d="M20 8v12l8 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="20" r="3" fill="currentColor"/></svg>
+        </div>
+        <div class="number-value">27+</div>
+        <div class="number-title">Iconic Projects</div>
+        <p>Pharma labs, hospitals, malls, resorts, commercial complexes — across Hyderabad, Nagpur, Delhi, Vijayawada & more.</p>
+      </div>
+      <div class="number-card">
+        <div class="number-icon">
+          <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="18" width="8" height="18" rx="1" fill="currentColor" opacity="0.4"/><rect x="16" y="10" width="8" height="26" rx="1" fill="currentColor" opacity="0.6"/><rect x="28" y="4" width="8" height="32" rx="1" fill="currentColor"/></svg>
+        </div>
+        <div class="number-value">3</div>
+        <div class="number-title">Manufacturing Facilities</div>
+        <p>Own facilities at Kalakal, Cherlapally, and Maheshwaram — full fabrication and quality control infrastructure.</p>
+      </div>
+      <div class="number-card">
+        <div class="number-icon">
+          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2" opacity="0.3"/><circle cx="20" cy="20" r="4" fill="currentColor"/><path d="M20 6v4M20 30v4M6 20h4M30 20h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 10l3 3M27 27l3 3M10 30l3-3M27 13l3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/></svg>
+        </div>
+        <div class="number-value">400+</div>
+        <div class="number-title">Products Manufactured</div>
+        <p>Structural steel, railway, highway, electrical, interiors, furniture, cladding, CNC precision — across all categories.</p>
+      </div>
+      <div class="number-card">
+        <div class="number-icon">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 4l4 8 9 1.3-6.5 6.3 1.5 9L20 24.5 11.9 28.6l1.5-9L7 13.3l9-1.3L20 4z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="number-value">10+</div>
+        <div class="number-title">Cities Served</div>
+        <p>Hyderabad, Nagpur, Delhi, Vijayawada, and more — nationwide delivery with full documentation.</p>
+      </div>
     </div>
   </section>
 
   <section class="promo-banner">
     <div class="banner-container">
+      <div class="banner-glow"></div>
+      <div class="banner-pattern"></div>
       <div class="banner-content">
         <div class="content-left">
           <div class="brand-logo">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="36" height="36" stroke="white" stroke-width="2" fill="none"/>
-              <path d="M12 12L28 28M28 12L12 28" stroke="white" stroke-width="2"/>
-            </svg>
+            <div class="brand-logo-icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 20h16M20 12v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
             <div class="brand-text">
               <div class="brand-name">PROQYUR</div>
               <div class="brand-subtitle">MANUFACTURING</div>
             </div>
           </div>
 
-          <h2 class="banner-headline">Introducing PROQYUR Manufacturing</h2>
-          <p class="banner-subtext">One trusted partner for infrastructure, industrial, and custom manufacturing requirements.</p>
+          <h2 class="banner-headline">
+            Introducing<br>
+            <span class="headline-accent">PROQYUR Manufacturing</span>
+          </h2>
+          <p class="banner-subtext">We source and manufacture precision-engineered components, fabricated items, furniture, and materials — backed by our own manufacturing facilities.</p>
 
           <div class="stats-row">
             <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Facilities</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">27+</div>
+              <div class="stat-label">Iconic Projects</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">400+</div>
+              <div class="stat-label">Products</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
               <div class="stat-number">10+</div>
-              <div class="stat-label">Years of Industry Experience</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Manufacturing Partners</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <div class="stat-number">10+</div>
-              <div class="stat-label">Cities Served Across India</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <div class="stat-number">1000+</div>
-              <div class="stat-label">Projects & Deliveries Supported</div>
+              <div class="stat-label">Cities Served</div>
             </div>
           </div>
 
-          <button class="banner-cta">
-            Get a Quote
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+          <div class="banner-actions">
+            <button class="banner-cta" routerLink="/contact">
+              Get a Quote
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <span class="banner-note">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              Quality assured delivery
+            </span>
+          </div>
         </div>
 
         <div class="content-right">
           <div class="feature-image">
-            <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
-              <source src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/5ea4319e-f6bb-4852-b1dd-c599eda5b09d_fictiv-misumi.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <div class="animated-factory">
+              <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="factory-svg">
+                <!-- Factory building -->
+                <rect x="40" y="120" width="320" height="160" rx="4" fill="#1e1b4b" opacity="0.9"/>
+                <rect x="40" y="120" width="320" height="160" rx="4" stroke="#7C3AED" stroke-width="1.5" opacity="0.5"/>
+
+                <!-- Roof/chimneys -->
+                <polygon points="60,120 100,70 140,120" fill="#2d2a5e" stroke="#7C3AED" stroke-width="1"/>
+                <polygon points="160,120 200,80 240,120" fill="#2d2a5e" stroke="#7C3AED" stroke-width="1"/>
+                <rect x="280" y="80" width="20" height="40" fill="#2d2a5e" stroke="#7C3AED" stroke-width="1"/>
+                <rect x="320" y="90" width="16" height="30" fill="#2d2a5e" stroke="#7C3AED" stroke-width="1"/>
+
+                <!-- Smoke particles -->
+                <circle cx="290" cy="65" r="4" fill="#a78bfa" opacity="0.6" class="smoke smoke-1"/>
+                <circle cx="295" cy="55" r="3" fill="#a78bfa" opacity="0.4" class="smoke smoke-2"/>
+                <circle cx="328" cy="75" r="3.5" fill="#a78bfa" opacity="0.5" class="smoke smoke-3"/>
+                <circle cx="332" cy="65" r="2.5" fill="#a78bfa" opacity="0.3" class="smoke smoke-4"/>
+
+                <!-- Windows -->
+                <rect x="70" y="145" width="30" height="25" rx="2" fill="#7C3AED" opacity="0.3" class="window window-1"/>
+                <rect x="115" y="145" width="30" height="25" rx="2" fill="#7C3AED" opacity="0.3" class="window window-2"/>
+                <rect x="160" y="145" width="30" height="25" rx="2" fill="#7C3AED" opacity="0.3" class="window window-3"/>
+                <rect x="205" y="145" width="30" height="25" rx="2" fill="#7C3AED" opacity="0.3" class="window window-4"/>
+                <rect x="250" y="145" width="30" height="25" rx="2" fill="#7C3AED" opacity="0.3" class="window window-5"/>
+                <rect x="295" y="145" width="30" height="25" rx="2" fill="#7C3AED" opacity="0.3" class="window window-6"/>
+
+                <!-- Conveyor belt -->
+                <rect x="60" y="230" width="280" height="12" rx="6" fill="#312e81" stroke="#7C3AED" stroke-width="1"/>
+                <circle cx="80" cy="236" r="4" fill="#7C3AED" class="belt-dot belt-1"/>
+                <circle cx="120" cy="236" r="4" fill="#7C3AED" class="belt-dot belt-2"/>
+                <circle cx="160" cy="236" r="4" fill="#7C3AED" class="belt-dot belt-3"/>
+                <circle cx="200" cy="236" r="4" fill="#7C3AED" class="belt-dot belt-4"/>
+                <circle cx="240" cy="236" r="4" fill="#7C3AED" class="belt-dot belt-5"/>
+                <circle cx="280" cy="236" r="4" fill="#7C3AED" class="belt-dot belt-6"/>
+                <circle cx="320" cy="236" r="4" fill="#7C3AED" class="belt-dot belt-7"/>
+
+                <!-- Product boxes on belt -->
+                <rect x="90" y="215" width="18" height="15" rx="2" fill="#a78bfa" class="box box-1"/>
+                <rect x="170" y="215" width="18" height="15" rx="2" fill="#c4b5fd" class="box box-2"/>
+                <rect x="250" y="215" width="18" height="15" rx="2" fill="#a78bfa" class="box box-3"/>
+
+                <!-- Gear icon -->
+                <g class="gear-spin" transform="translate(200, 195)">
+                  <circle cx="0" cy="0" r="12" fill="none" stroke="#7C3AED" stroke-width="2"/>
+                  <circle cx="0" cy="0" r="5" fill="#7C3AED"/>
+                  <rect x="-2" y="-16" width="4" height="8" rx="1" fill="#7C3AED"/>
+                  <rect x="-2" y="8" width="4" height="8" rx="1" fill="#7C3AED"/>
+                  <rect x="-16" y="-2" width="8" height="4" rx="1" fill="#7C3AED"/>
+                  <rect x="8" y="-2" width="8" height="4" rx="1" fill="#7C3AED"/>
+                </g>
+
+                <!-- Spark effects -->
+                <circle cx="120" cy="190" r="2" fill="#fbbf24" class="spark spark-1"/>
+                <circle cx="125" cy="185" r="1.5" fill="#fbbf24" class="spark spark-2"/>
+                <circle cx="115" cy="187" r="1" fill="#fbbf24" class="spark spark-3"/>
+              </svg>
+            </div>
+            <div class="floating-badge floating-badge-top">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>ISO Certified Partners</span>
+            </div>
+            <div class="floating-badge floating-badge-bottom">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Fast Turnaround</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="trusted-partners">
-    <h2>Trusted by Industry Leaders Nationwide</h2>
-    <div class="partners-logos">
-      <div class="partner-logo">
-        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 1</text>
-        </svg>
-      </div>
-      <div class="partner-logo">
-        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 2</text>
-        </svg>
-      </div>
-      <div class="partner-logo">
-        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 3</text>
-        </svg>
-      </div>
-      <div class="partner-logo">
-        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 4</text>
-        </svg>
-      </div>
-      <div class="partner-logo">
-        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="10" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#666">Partner 5</text>
-        </svg>
-      </div>
-    </div>
-  </section>
 
   <section class="why-section">
+    <div class="animated-dots">
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+      <div class="dot dot-4"></div>
+      <div class="dot dot-5"></div>
+      <div class="dot dot-6"></div>
+    </div>
     <div class="why-container">
       <div class="section-intro">
-        <p class="accent-heading">WHY PROQYUR</p>
-        <h2 class="section-title">Complete Procurement & Manufacturing Solutions Under One Roof</h2>
-        <p class="section-description">From sourcing industrial materials to managing manufacturing partners, PROQYUR helps businesses simplify procurement, improve quality, and ensure timely delivery across India.</p>
+        <span class="accent-badge">WHY PROQYUR</span>
+        <h2 class="section-title">What nobody else<br>in this market does.</h2>
       </div>
 
-      <div class="why-cards">
-        <div class="why-card">
-          <div class="card-illustration">
-            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/7a1dd524-b226-4555-a866-3e97c7e463ed_.jpg" alt="Reliable Supply">
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-item-number">01</div>
+          <div class="why-item-content">
+            <h3>Own manufacturing facilities.</h3>
+            <p>Three dedicated facilities in Kalakal, Cherlapally, and Maheshwaram. We fabricate in-house — that means quality control at every stage, faster lead times, and no margin stacking from intermediaries.</p>
           </div>
-          <h3>Reliable Supply</h3>
-          <p>Access verified suppliers and manufacturing partners for consistent quality and delivery.</p>
         </div>
 
-        <div class="why-card">
-          <div class="card-illustration">
-            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/6a89aa54-584f-4fcb-ae58-4529f61a3ea5_control.jpg" alt="Project Control">
+        <div class="why-item">
+          <div class="why-item-number">02</div>
+          <div class="why-item-content">
+            <h3>Certified mills & partner workshops.</h3>
+            <p>Raw materials sourced only from certified mills. Fabrication coordinated with vetted partner workshops. Every product comes with material test certificates and full documentation.</p>
           </div>
-          <h3>Project Control</h3>
-          <p>Track sourcing, production, and fulfillment with dedicated support throughout the process.</p>
         </div>
 
-        <div class="why-card">
-          <div class="card-illustration">
-            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/4979cf27-ab28-4005-a43e-91288812fafa_Cpacity.jpg" alt="Scalable Capacity">
+        <div class="why-item">
+          <div class="why-item-number">03</div>
+          <div class="why-item-content">
+            <h3>Quality is non-negotiable.</h3>
+            <p>Embedded at every stage — from raw material selection and production control, to performance assurance and RITES inspection. Multiple checkpoints for strength and durability.</p>
           </div>
-          <h3>Scalable Capacity</h3>
-          <p>Support projects of any size through our extensive manufacturing and supplier network.</p>
         </div>
 
-        <div class="why-card">
-          <div class="card-illustration">
-            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/6b81fc50-6b3e-4b66-a739-8fe0249324fd_cost%20down.jpg" alt="Cost Optimization">
+        <div class="why-item">
+          <div class="why-item-number">04</div>
+          <div class="why-item-content">
+            <h3>One partner for everything.</h3>
+            <p>Structural steel, railways, highways, furniture, interiors, electrical, CNC precision — 400+ products across every category your project needs. One point of contact. One delivery schedule.</p>
           </div>
-          <h3>Cost Optimization</h3>
-          <p>Reduce procurement costs through strategic sourcing and efficient supplier management.</p>
         </div>
-      </div>
 
-      <div class="section-cta">
-        <button class="cta-btn" routerLink="/contact">
-          Get Instant Quote
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
+        <div class="why-item">
+          <div class="why-item-number">05</div>
+          <div class="why-item-content">
+            <h3>Proven on iconic projects.</h3>
+            <p>Hetero Pharma, Natco Pharma, Dr Reddys, Aparna Craft, The Leela Resort, GMR, Daspalla Hotel — 27+ landmark projects delivered across pharma, hospitality, and commercial sectors.</p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-item-number">06</div>
+          <div class="why-item-content">
+            <h3>24-hour response guarantee.</h3>
+            <p>Share your drawings, BOQ, or requirement brief — our engineering team responds with a structured feasibility and costing overview within 24 hours. No waiting. No chasing.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="platform-section">
     <div class="platform-container">
+      <div class="platform-header">
+        <span class="platform-badge">All-In-One Platform</span>
+        <h2 class="platform-title">One Simple Platform for Procurement & Manufacturing</h2>
+        <p class="platform-description">
+          Manage sourcing, supplier coordination, production tracking, and project delivery through a single platform designed for industrial and infrastructure requirements.
+        </p>
+      </div>
+
       <div class="platform-content">
         <div class="content-text">
-          <h2 class="platform-title">One Simple Platform for Procurement & Manufacturing</h2>
-          <p class="platform-description">
-            Manage sourcing, supplier coordination, production tracking, and project delivery through a single platform designed for industrial and infrastructure requirements.
-          </p>
+          <div class="platform-features">
+            <div class="platform-feature-item">
+              <div class="platform-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="platform-feature-text">
+                <h4>Fast RFQ Management</h4>
+                <p>Submit requirements and receive competitive quotes from verified manufacturers within 24 hours.</p>
+              </div>
+            </div>
 
-          <ul class="platform-features">
-            <li>
-              <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
-                <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Fast RFQ & quotation management</span>
-            </li>
-            <li>
-              <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
-                <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Verified supplier and manufacturing network</span>
-            </li>
-            <li>
-              <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
-                <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Real-time project and order tracking</span>
-            </li>
-          </ul>
+            <div class="platform-feature-item">
+              <div class="platform-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="platform-feature-text">
+                <h4>Verified Supplier Network</h4>
+                <p>Every manufacturer is pre-vetted through facility audits, certifications checks, and sample production runs.</p>
+              </div>
+            </div>
 
-          <button class="platform-cta">
+            <div class="platform-feature-item">
+              <div class="platform-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                  <polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="platform-feature-text">
+                <h4>Real-Time Tracking</h4>
+                <p>Monitor every milestone from tooling to shipping with live status updates and proactive alerts.</p>
+              </div>
+            </div>
+
+            <div class="platform-feature-item">
+              <div class="platform-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="platform-feature-text">
+                <h4>Centralized Documentation</h4>
+                <p>All specs, inspection reports, certifications, and invoices organized in one accessible location.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="platform-cta" routerLink="/contact">
             Request a Quote
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -329,6 +926,7 @@
 
         <div class="content-image">
           <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8b70ab7f-a5bf-4fc1-abf0-1c6ce28c5102_popop.jpg" alt="Platform Interface">
+          <div class="content-image-glow"></div>
         </div>
       </div>
     </div>
@@ -337,92 +935,158 @@
   <section class="manufacturing-journey">
     <div class="journey-container">
       <div class="journey-header">
-        <h2 class="journey-title">Manufacturing What's Next from Start to Scale</h2>
-        <p class="journey-description">
-          We manage supplier quality and global capacity so you get production-grade custom parts you can count on.
-        </p>
+        <span class="journey-badge">THE PROCESS</span>
+        <h2 class="journey-title">Straightforward. No runaround.</h2>
       </div>
 
-      <div class="journey-tabs-wrapper">
-        <div class="journey-tabs">
-          <button
-            class="tab-button"
-            [class.active]="activeTab === 'design'"
-            (click)="setActiveTab('design')">
-            Design
-          </button>
-          <button
-            class="tab-button"
-            [class.active]="activeTab === 'prototyping'"
-            (click)="setActiveTab('prototyping')">
-            Rapid Prototyping
-          </button>
-          <button
-            class="tab-button"
-            [class.active]="activeTab === 'sourcing'"
-            (click)="setActiveTab('sourcing')">
-            Sourcing
-          </button>
-          <button
-            class="tab-button"
-            [class.active]="activeTab === 'planning'"
-            (click)="setActiveTab('planning')">
-            Manufacturing Planning
-          </button>
-          <button
-            class="tab-button"
-            [class.active]="activeTab === 'production'"
-            (click)="setActiveTab('production')">
-            Production
-          </button>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-step-number">
+            <span>01</span>
+            <div class="step-pulse"></div>
+          </div>
+          <div class="process-step-line"></div>
+          <div class="process-step-content">
+            <h3>Design Brief & Technical Inputs</h3>
+            <p>Share your drawings, BOQ, or requirement brief. Our engineering team reviews scope, specs, and project parameters.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step-number">
+            <span>02</span>
+            <div class="step-pulse"></div>
+          </div>
+          <div class="process-step-line"></div>
+          <div class="process-step-content">
+            <h3>Engineering Review & BOQ Finalization</h3>
+            <p>We respond with a structured feasibility and costing overview within 24 hours. Detailed quote with commodity rates + fabrication cost + GST.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step-number">
+            <span>03</span>
+            <div class="step-pulse"></div>
+          </div>
+          <div class="process-step-line"></div>
+          <div class="process-step-content">
+            <h3>Material Sourcing & Fabrication</h3>
+            <p>Materials sourced from certified mills. Fabrication coordinated with our facilities and partner workshops. Quality control at every stage.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step-number">
+            <span>04</span>
+            <div class="step-pulse"></div>
+          </div>
+          <div class="process-step-line"></div>
+          <div class="process-step-content">
+            <h3>QC, Documentation & Dispatch</h3>
+            <p>RITES inspection, material test certificates, and full documentation. Packing and dispatch to site — on schedule, every time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="submit-docs">
+    <div class="animated-shapes">
+      <div class="shape shape-doc">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="1"/>
+          <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="shape shape-pen">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+    <div class="submit-docs-container">
+      <div class="submit-docs-left">
+        <span class="submit-docs-label">SUBMIT YOUR DOCUMENTS</span>
+        <h2>Drop your drawings,<br>BOQ, or spec sheet.</h2>
+        <p>We review every submission personally. If your requirement is within scope, our team comes back to you with a quote within 24 hours.</p>
+
+        <div class="doc-types">
+          <div class="doc-type">
+            <span class="doc-type-icon">📐</span>
+            <div>
+              <strong>Engineering Drawings</strong>
+              <span>AutoCAD, PDF, DWG, DXF or scanned sketches</span>
+            </div>
+          </div>
+          <div class="doc-type">
+            <span class="doc-type-icon">📋</span>
+            <div>
+              <strong>Bill of Quantities (BOQ)</strong>
+              <span>Excel, PDF, or any format you use</span>
+            </div>
+          </div>
+          <div class="doc-type">
+            <span class="doc-type-icon">📄</span>
+            <div>
+              <strong>Technical Specifications</strong>
+              <span>IS codes, custom specs, material certifications required</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="journey-content-card">
-        <div class="card-content">
-          <div class="content-left-section">
-            <div class="section-label">{{ getActiveContent().label }}</div>
-
-            <div class="features-section">
-              <h3 class="features-title">{{ getActiveContent().title }}</h3>
-              <ul class="feature-list">
-                <li *ngFor="let feature of getActiveContent().features">
-                  <svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" fill="#2dd4bf"/>
-                    <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>{{ feature }}</span>
-                </li>
-              </ul>
+      <div class="submit-docs-right">
+        <form class="submit-form" (ngSubmit)="submitDocuments()" #docForm="ngForm">
+          <div class="upload-zone" (click)="fileInput.click()">
+            <span class="upload-icon">📎</span>
+            <p class="upload-title">Drag & Drop Files Here</p>
+            <p class="upload-subtitle">or click to select files from your computer</p>
+            <div class="upload-formats">
+              <span>PDF</span>
+              <span>DWG</span>
+              <span>DXF</span>
+              <span>XLS</span>
+              <span>XLSX</span>
+              <span>JPG</span>
+              <span>PNG</span>
             </div>
-
-            <div class="tech-section">
-              <h3 class="tech-title">{{ getActiveContent().techTitle }}</h3>
-              <ul class="tech-list">
-                <li *ngFor="let tech of getActiveContent().techFeatures">
-                  <svg class="check-icon-dark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" fill="#333"/>
-                    <path d="M8 12l2.5 2.5L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>{{ tech }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <button class="journey-cta">
-              Get Instant Quote
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
+            <button type="button" class="upload-btn">📁  Select Files</button>
+            <input #fileInput type="file" multiple accept=".pdf,.dwg,.dxf,.xls,.xlsx,.jpg,.png" hidden>
           </div>
 
-          <div class="content-right-section">
-            <div class="image-container">
-              <img [src]="getActiveContent().image" [alt]="getActiveContent().label">
+          <div class="form-fields">
+            <div class="form-field">
+              <label>COMPANY NAME</label>
+              <input type="text" placeholder="ABC Infrastructure Ltd" name="company" ngModel required>
+            </div>
+            <div class="form-field">
+              <label>CONTACT PERSON</label>
+              <input type="text" placeholder="Rajesh Kumar" name="contact" ngModel required>
+            </div>
+            <div class="form-field">
+              <label>PHONE / WHATSAPP</label>
+              <input type="tel" placeholder="+91 98765 XXXXX" name="phone" ngModel required>
+            </div>
+            <div class="form-field">
+              <label>DOCUMENT TYPE</label>
+              <select name="docType" ngModel required>
+                <option value="" disabled selected>Select type</option>
+                <option value="drawing">Engineering Drawing</option>
+                <option value="boq">Bill of Quantities</option>
+                <option value="spec">Technical Specification</option>
+                <option value="other">Other</option>
+              </select>
             </div>
           </div>
-        </div>
+
+          <button type="submit" class="submit-docs-btn">
+            Send to Proqyur Team
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </section>
@@ -438,28 +1102,28 @@
         </div>
 
         <div class="network-info">
-          <div class="network-label">TRUSTED MANUFACTURING NETWORK</div>
-          <h2 class="network-title">One Manufacturing Partner. Nationwide Supply.</h2>
+          <div class="network-label">OUR MOST ICONIC PROJECTS</div>
+          <h2 class="network-title">Trusted by Pharma, Hospitality & Commercial Leaders.</h2>
           <p class="network-description">
-            Proqyur connects businesses with verified manufacturing partners across India for fabrication, electrical systems, civil infrastructure, industrial components, and custom manufacturing solutions.
+            From pharma labs and hospitals to malls, resorts, and commercial complexes — we've delivered across Hyderabad, Nagpur, Delhi, Vijayawada, and beyond.
           </p>
 
           <div class="network-stats">
             <div class="stat-item">
+              <div class="stat-number">27+</div>
+              <div class="stat-text">Iconic Projects Delivered</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-text">Cities Active</div>
+            </div>
+            <div class="stat-item">
               <div class="stat-number">10+</div>
-              <div class="stat-text">Years of Industry Experience</div>
+              <div class="stat-text">Pharma & Lab Facilities</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">50+</div>
-              <div class="stat-text">Manufacturing Partners</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">10+</div>
-              <div class="stat-text">Cities Served Across India</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">1000+</div>
-              <div class="stat-text">Projects & Deliveries Supported</div>
+              <div class="stat-number">3</div>
+              <div class="stat-text">Own Manufacturing Facilities</div>
             </div>
           </div>
 
@@ -474,254 +1138,12 @@
     </div>
   </section>
 
-  <section class="expertise-cards-section">
-    <div class="expertise-cards-container">
-      <div class="expertise-card-item">
-        <div class="expertise-card-media">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39ba7f5e-88e1-417c-ae85-900bf2e905fa_guided%20expertise.jpg" alt="Guided Expertise">
-        </div>
-        <div class="expertise-card-info">
-          <div class="expertise-card-label">GUIDED EXPERTISE</div>
-          <h3 class="expertise-card-heading">AI and Human-Supported Guidance at Every Step</h3>
-        </div>
-        <button class="expertise-expand-button">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
 
-      <div class="expertise-card-item">
-        <div class="expertise-card-media">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/64f44573-f0c4-4280-9bf2-857dc9aebe7c_FICTIV%20Quality%20Management.jpg" alt="PROQYUR Quality Management">
-        </div>
-        <div class="expertise-card-info">
-          <div class="expertise-card-label">PROQYUR QUALITY MANAGEMENT</div>
-          <h3 class="expertise-card-heading">A Dedicated Team for Dependable Service & Quality</h3>
-        </div>
-        <button class="expertise-expand-button">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="expertise-card-item">
-        <div class="expertise-card-media">
-          <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
-            <source src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/14fa7c87-964c-4636-97c8-8dfff98a733a_team.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="expertise-card-info">
-          <div class="expertise-card-label">PROQYUR TEAMS</div>
-          <h3 class="expertise-card-heading">Collaborative, Team-Based Sourcing</h3>
-        </div>
-        <button class="expertise-expand-button">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class="success-stories-section">
-    <div class="stories-header">
-      <div class="stories-label">PROQYUR SUCCESS STORIES</div>
-      <h2 class="stories-title">See Why 61% of the Fortune 500 Manufacture With PROQYUR</h2>
-      <p class="stories-description">You're covered. We manufacture custom parts for leading teams in robotics, aerospace, medtech, automotive, EV & eVTOL, and more.</p>
-    </div>
-
-    <div class="stories-carousel-wrapper">
-      <button class="carousel-nav-button prev-button" (click)="prevStory()">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-
-      <div class="stories-carousel-container">
-        <div class="stories-carousel-track" [style.transform]="'translateX(-' + (currentStorySlide * 100) + '%)'">
-          <div class="story-card">
-            <div class="story-image">
-              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/23ef5429-00b0-4ee8-bf84-0225652792aa_Lunar%20energy.jpg" alt="Lunar Energy">
-              <div class="story-play-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
-                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
-                </svg>
-              </div>
-            </div>
-            <div class="story-content">
-              <div class="story-company">Lunar Energy</div>
-              <div class="story-category">CLEAN TECH</div>
-              <a href="#" class="story-link">View case study</a>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-image">
-              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/073bc215-9bf6-474c-a94f-c672bce03fe1_Nightside.jpg" alt="Nightside">
-              <div class="story-play-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
-                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
-                </svg>
-              </div>
-            </div>
-            <div class="story-content">
-              <div class="story-company">Nightside</div>
-              <div class="story-category">CONSUMER PRODUCTS</div>
-              <a href="#" class="story-link">View case study</a>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-image">
-              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cbbeb187-de6c-4cb3-bf4a-b2c21194046d_Medical%20device%20manufacture.jpg" alt="Medical Device Manufacturer">
-              <div class="story-play-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
-                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
-                </svg>
-              </div>
-            </div>
-            <div class="story-content">
-              <div class="story-company">Medical Device Manufacturer</div>
-              <div class="story-category">MEDTECH</div>
-              <a href="#" class="story-link">View case study</a>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-image">
-              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8088f10f-d435-4c81-a81e-e4acde1f0366_Formula.jpg" alt="Formula Electric Berkeley">
-              <div class="story-play-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
-                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
-                </svg>
-              </div>
-            </div>
-            <div class="story-content">
-              <div class="story-company">Formula Electric Berkeley</div>
-              <div class="story-category">AUTOMOTIVE</div>
-              <a href="#" class="story-link">View case study</a>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-image">
-              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3d4e09f0-dae6-4a3c-aa5d-7a86c3c95f59_purecell.jpg" alt="Purcell">
-              <div class="story-play-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
-                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
-                </svg>
-              </div>
-            </div>
-            <div class="story-content">
-              <div class="story-company">Purcell</div>
-              <div class="story-category">CONSUMER PRODUCTS</div>
-              <a href="#" class="story-link">View case study</a>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-image">
-              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/16826a0d-bfe1-449f-8185-902c4cd01c34_AIRVINE.JPG" alt="AIRVINE">
-              <div class="story-play-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
-                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
-                </svg>
-              </div>
-            </div>
-            <div class="story-content">
-              <div class="story-company">AIRVINE</div>
-              <div class="story-category">TECHNOLOGY</div>
-              <a href="#" class="story-link">View case study</a>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-image">
-              <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/48285cce-d6c0-4174-b8bc-b4e017e3d132_Mchel%20hair%20care.jpg" alt="m'Chel Hair Care">
-              <div class="story-play-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" fill="white" opacity="0.9"/>
-                  <path d="M10 8l6 4-6 4V8z" fill="#2dd4bf"/>
-                </svg>
-              </div>
-            </div>
-            <div class="story-content">
-              <div class="story-company">m'Chel Hair Care</div>
-              <div class="story-category">CLEAN TECH</div>
-              <a href="#" class="story-link">View case study</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-nav-button next-button" (click)="nextStory()">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-
-    <div class="carousel-dots">
-      <button *ngFor="let dot of storyDots; let i = index"
-              class="dot"
-              [class.active]="i === currentStorySlide"
-              (click)="goToStorySlide(i)">
-      </button>
-    </div>
-  </section>
-
-  <section class="testimonial-section-dark">
-    <div class="testimonial-container-main">
-      <div class="testimonial-content-grid">
-        <div class="testimonial-text-side">
-          <div class="testimonial-stars-row">
-            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-            <svg class="star-icon-teal" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-          </div>
-
-          <blockquote class="testimonial-quote-text">
-            "The difference that PROQYUR offers is fast turnaround time. I have a concept in my head, upload it to the platform, and receive production-ready parts in days."
-          </blockquote>
-
-          <div class="testimonial-customer-info">
-            <div class="testimonial-customer-name">Joe Tedesco</div>
-            <div class="testimonial-customer-role">Lead Aerospace Engineer, Heliospace</div>
-          </div>
-        </div>
-
-        <div class="testimonial-image-side">
-          <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39ba7f5e-88e1-417c-ae85-900bf2e905fa_guided%20expertise.jpg" alt="Joe Tedesco - Heliospace">
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="cta-banner-section">
     <div class="cta-banner-container">
-      <h2 class="cta-banner-heading">Let's build something great, together.</h2>
-      <p class="cta-banner-subheading">Upload your design and we'll get you sourcing custom parts right away.</p>
+      <h2 class="cta-banner-heading">Tell Us What You're Building. We'll Take It From There.</h2>
+      <p class="cta-banner-subheading">Share your drawings, BOQ or requirement brief — our engineering team will respond with a structured feasibility and costing overview within 24 hours.</p>
       <button class="cta-banner-button">
         Get Instant Quote
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -744,7 +1166,7 @@
           <div class="footer-locations-col">
             <div class="footer-brand-section">
               <div class="footer-brand-name">Proqyur</div>
-              <p class="footer-brand-description">One manufacturing partner for everything your infrastructure project needs. Hyderabad-based. 10+ years in construction & manufacturing. 50+ companies. 10 cities.</p>
+              <p class="footer-brand-description">One manufacturing partner for everything your project needs. Own facilities in Kalakal, Cherlapally & Maheshwaram. 27+ iconic projects. Pan-India delivery.</p>
             </div>
           </div>
         </div>
@@ -754,27 +1176,27 @@
             <div class="footer-links-col">
               <h4>PRODUCTS</h4>
               <ul>
-                <li><a href="#">Metal Fabrication</a></li>
-                <li><a href="#">Concrete Products</a></li>
-                <li><a href="#">Electrical & Cables</a></li>
-                <li><a href="#">Precision Parts</a></li>
-                <li><a href="#">Fasteners & Hardware</a></li>
-                <li><a href="#">Pipes & Fittings</a></li>
-                <li><a href="#">Solar Mounting</a></li>
-                <li><a href="#">Road & Civil Hardware</a></li>
-                <li><a href="#">Custom Manufacturing</a></li>
+                <li><a href="#">Structural Steel & PEB</a></li>
+                <li><a href="#">Railway Infrastructure</a></li>
+                <li><a href="#">Highway & Bridges</a></li>
+                <li><a href="#">Furniture & Interiors</a></li>
+                <li><a href="#">Doors, Windows & Facades</a></li>
+                <li><a href="#">Electrical & Data Centre</a></li>
+                <li><a href="#">CNC & Precision Parts</a></li>
+                <li><a href="#">Mechanical & Industrial</a></li>
+                <li><a href="#">Stone & Hardscaping</a></li>
               </ul>
             </div>
 
             <div class="footer-links-col">
               <h4>SECTORS</h4>
               <ul>
-                <li><a href="#">Roads & Highways</a></li>
-                <li><a href="#">Railways</a></li>
-                <li><a href="#">Solar Energy</a></li>
-                <li><a href="#">Wind Energy</a></li>
-                <li><a href="#">Data Centers</a></li>
-                <li><a href="#">Civil Construction</a></li>
+                <li><a href="#">Pharma & Laboratories</a></li>
+                <li><a href="#">Railways & Highways</a></li>
+                <li><a href="#">Hospitality & Resorts</a></li>
+                <li><a href="#">Commercial & Malls</a></li>
+                <li><a href="#">Data Centres</a></li>
+                <li><a href="#">Residential & Villas</a></li>
               </ul>
             </div>
 
@@ -811,8 +1233,9 @@
         <div class="footer-certifications">
           <span>IS 2062</span>
           <span>IS 1367</span>
+          <span>IS 3614</span>
           <span>RDSO</span>
-          <span>GST</span>
+          <span>RITES</span>
           <span>MSME</span>
         </div>
       </div>

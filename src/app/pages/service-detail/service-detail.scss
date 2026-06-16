@@ -44,7 +44,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #2dd4bf;
+  color: #7C3AED;
   font-size: 1.0625rem;
   font-weight: 600;
   text-decoration: none;
@@ -58,7 +58,7 @@
   }
 
   &:hover {
-    color: #25b9a7;
+    color: #6D28D9;
 
     svg {
       transform: translate(2px, -2px);
@@ -164,7 +164,7 @@
 .quote-button {
   align-self: flex-start;
   padding: 0.9375rem 2.25rem;
-  background: #2dd4bf;
+  background: #7C3AED;
   color: #ffffff;
   border: none;
   border-radius: 0.25rem;
@@ -176,9 +176,9 @@
   letter-spacing: 0.01em;
 
   &:hover {
-    background: #25b9a7;
+    background: #6D28D9;
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(45, 212, 191, 0.35);
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);
   }
 }
 
@@ -209,7 +209,7 @@
   svg {
     width: 44px;
     height: 44px;
-    color: #2dd4bf;
+    color: #7C3AED;
     stroke-width: 1.8;
   }
 }
@@ -224,7 +224,7 @@
   .trust-number {
     font-size: 1.625rem;
     font-weight: 700;
-    color: #2dd4bf;
+    color: #7C3AED;
     line-height: 1.2;
   }
 

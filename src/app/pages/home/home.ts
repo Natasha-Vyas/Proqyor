@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ServiceModalComponent } from '../service-detail/service-modal';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink, ServiceModalComponent],
+  imports: [CommonModule, RouterLink, FormsModule, ServiceModalComponent],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -17,82 +18,82 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   tabContent = {
     design: {
-      label: 'IDEATION',
-      title: 'Guided Expertise',
+      label: 'DESIGN BRIEF',
+      title: 'Technical Inputs',
       features: [
-        'Manufacturability Guidance',
-        'Material & Finishing Expertise',
-        'Cost, Quality, Compliance'
+        'Engineering drawings & BOQ',
+        'Material & specification review',
+        'Feasibility assessment'
       ],
-      techTitle: 'Our Technology',
+      techTitle: 'What We Accept',
       techFeatures: [
-        'Instant DFM',
-        'Materials.AI',
-        '2D drawings generator & annotation'
+        'AutoCAD / PDF / DWG / DXF',
+        'Excel BOQ & specs',
+        'Scanned sketches & briefs'
       ],
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/a91980cb-4afa-4439-90bb-effb5a76e09a_Design%20.jpg'
     },
     prototyping: {
-      label: 'RAPID PROTOTYPING',
-      title: 'Fast Iteration',
+      label: 'ENGINEERING REVIEW',
+      title: 'BOQ Finalization',
       features: [
-        'Quick turnaround times',
-        'Multiple material options',
-        'Functional prototypes'
+        'Structured costing overview',
+        'Material grade selection',
+        'Production timeline planning'
       ],
       techTitle: 'Our Capabilities',
       techFeatures: [
-        '3D Printing',
-        'CNC Machining',
-        'Vacuum Casting'
+        '24-hour response',
+        'Commodity rate transparency',
+        'IS/RDSO compliance check'
       ],
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c91260a7-f25f-453a-ab2e-a60ce1885ebb_Rapid%20prototyping.jpg'
     },
     sourcing: {
-      label: 'SOURCING',
-      title: 'Global Network',
+      label: 'MATERIAL SOURCING',
+      title: 'Certified Mills',
       features: [
-        'Vetted supplier network',
-        'Quality assurance',
-        'Cost optimization'
+        'Premium quality raw materials',
+        'Certified mill procurement',
+        'Material test certificates'
       ],
-      techTitle: 'Our Approach',
+      techTitle: 'Our Standards',
       techFeatures: [
-        'Strategic sourcing',
-        'Supplier management',
-        'Risk mitigation'
+        'IS 2062 / IS 800 steel',
+        'Grade 4.6 to 10.9 fasteners',
+        'RDSO approved materials'
       ],
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/d09a4a6f-a5d2-4063-9e78-a9dc0cfa3b79_Sourcing.jpg'
     },
     planning: {
-      label: 'MANUFACTURING PLANNING',
-      title: 'Strategic Planning',
+      label: 'FABRICATION',
+      title: 'Production Control',
       features: [
-        'Production optimization',
-        'Timeline management',
-        'Resource allocation'
+        'Precision manufacturing',
+        'Modern equipment',
+        'Partner workshop coordination'
       ],
-      techTitle: 'Our Process',
+      techTitle: 'Facilities',
       techFeatures: [
-        'Capacity planning',
-        'Process optimization',
-        'Quality control'
+        'Kalakal plant',
+        'Cherlapally facility',
+        'Maheshwaram unit'
       ],
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e83b207d-4fec-4d93-81da-daeba4740944_Manufacture%20planning.webp'
     },
     production: {
-      label: 'PRODUCTION',
-      title: 'Scale Manufacturing',
+      label: 'QC & DISPATCH',
+      title: 'Quality Assured Delivery',
       features: [
-        'High-volume production',
-        'Consistent quality',
-        'On-time delivery'
+        'RITES inspection & certification',
+        'Multiple strength checkpoints',
+        'Packing & dispatch to site'
       ],
-      techTitle: 'Our Services',
+      techTitle: 'Documentation',
       techFeatures: [
-        'Full-scale manufacturing',
-        'Quality assurance',
-        'Supply chain management'
+        'Material test certificates',
+        'Third-party inspection reports',
+        'Full GST documentation'
       ],
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e83b207d-4fec-4d93-81da-daeba4740944_Manufacture%20planning.webp'
     }
@@ -117,23 +118,21 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.tabContent[this.activeTab as keyof typeof this.tabContent];
   }
 
-  currentStorySlide = 0;
-  storyDots = [0, 1];
 
-  nextStory() {
-    if (this.currentStorySlide < this.storyDots.length - 1) {
-      this.currentStorySlide++;
-    }
+  activeDivisionPopup: string | null = null;
+
+  openDivisionPopup(division: string) {
+    this.activeDivisionPopup = division;
+    document.body.style.overflow = 'hidden';
   }
 
-  prevStory() {
-    if (this.currentStorySlide > 0) {
-      this.currentStorySlide--;
-    }
+  closeDivisionPopup() {
+    this.activeDivisionPopup = null;
+    document.body.style.overflow = '';
   }
 
-  goToStorySlide(index: number) {
-    this.currentStorySlide = index;
+  submitDocuments() {
+    alert('Thank you! Our team will review your documents and get back within 24 hours.');
   }
 
   constructor(private elementRef: ElementRef) {}
