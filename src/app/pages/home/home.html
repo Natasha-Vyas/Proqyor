@@ -81,7 +81,7 @@
       </ul>
 
       <div class="hero-buttons">
-        <button class="btn btn-primary" routerLink="/contact">
+        <button class="btn btn-primary" (click)="scrollToQuote()">
           Request a Quote
           <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2620,50 +2620,112 @@
 
 
 
-  <section class="next-steps-section">
+  <section class="next-steps-section" id="quote-section">
     <div class="next-steps-container">
-      <div class="next-steps-header">
-        <span class="next-steps-label">NEXT STEPS</span>
-        <h2>Tell us what you're building.<br>We'll take it from there.</h2>
-        <p class="next-steps-tagline">Let's Build Stronger Structures Together</p>
-      </div>
+      <div class="next-steps-split">
+        <!-- Left: Info -->
+        <div class="next-steps-left">
+          <span class="next-steps-label">NEXT STEPS</span>
+          <h2>Tell us what you're building.<br>We'll take it from there.</h2>
+          <p class="next-steps-desc">Drop your drawings, BOQ, or spec sheet. We review every submission personally. If your requirement is within scope, our team comes back to you with a quote within 24 hours.</p>
 
-      <div class="next-steps-grid">
-        <div class="next-step-card">
-          <div class="next-step-number">01</div>
-          <h4>Request for Proposal</h4>
-          <p>Submit your technical specification & project details</p>
-        </div>
-        <div class="next-step-card">
-          <div class="next-step-number">02</div>
-          <h4>Explore Certified Fabricators</h4>
-          <p>Browse our verified partner network with live availability</p>
-        </div>
-        <div class="next-step-card">
-          <div class="next-step-number">03</div>
-          <h4>Schedule a Technical Consultation</h4>
-          <p>Discuss custom requirements with our engineering team</p>
-        </div>
-      </div>
+          <div class="doc-types">
+            <div class="doc-type-item">
+              <div class="doc-type-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3z" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 14v7M14 17.5h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <strong>Engineering Drawings</strong>
+                <span>AutoCAD, PDF, DWG, DXF or scanned sketches</span>
+              </div>
+            </div>
+            <div class="doc-type-item">
+              <div class="doc-type-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="1.5"/><path d="M14 2v6h6M8 13h8M8 17h8M8 9h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <strong>Bill of Quantities (BOQ)</strong>
+                <span>Excel, PDF, or any format you use</span>
+              </div>
+            </div>
+            <div class="doc-type-item">
+              <div class="doc-type-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div>
+                <strong>Technical Specifications</strong>
+                <span>IS codes, custom specs, material certifications</span>
+              </div>
+            </div>
+          </div>
 
-      <div class="next-steps-cta">
-        <p class="one-stop-text">Get your One Stop Solution: Share your drawings, BOQ or requirement brief, and our engineering team will respond with a structured feasibility and costing overview within 24 hours.</p>
-        <div class="next-steps-contact">
-          <a href="tel:+919391419708" class="contact-link">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5"/></svg>
-            +91 9391419708
-          </a>
-          <a href="mailto:info@proqyur.com" class="contact-link">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5"/></svg>
-            info&#64;proqyur.com
-          </a>
+          <div class="next-steps-contact">
+            <a href="tel:+919391419708" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5"/></svg>
+              +91 9391419708
+            </a>
+            <a href="mailto:info@proqyur.com" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5"/></svg>
+              info&#64;proqyur.com
+            </a>
+          </div>
         </div>
-        <button class="next-steps-btn" routerLink="/contact">
-          Get Started
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
+
+        <!-- Right: Form -->
+        <div class="next-steps-right">
+          <div class="submit-form-card">
+            <h3>Submit Your Documents</h3>
+
+            <div class="drop-zone">
+              <svg viewBox="0 0 24 24" fill="none" class="drop-icon"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <p>Drag & Drop Files Here</p>
+              <span>or click to select files from your computer</span>
+              <div class="file-types">
+                <span class="file-badge">PDF</span>
+                <span class="file-badge">DWG</span>
+                <span class="file-badge">DXF</span>
+                <span class="file-badge">XLS</span>
+                <span class="file-badge">JPG</span>
+                <span class="file-badge">PNG</span>
+              </div>
+            </div>
+
+            <div class="form-fields">
+              <div class="form-row-split">
+                <div class="form-field-mini">
+                  <label>Company Name</label>
+                  <input type="text" placeholder="ABC Infrastructure Ltd">
+                </div>
+                <div class="form-field-mini">
+                  <label>Contact Person</label>
+                  <input type="text" placeholder="Rajesh Kumar">
+                </div>
+              </div>
+              <div class="form-row-split">
+                <div class="form-field-mini">
+                  <label>Phone / WhatsApp</label>
+                  <input type="tel" placeholder="+91 98765 XXXXX">
+                </div>
+                <div class="form-field-mini">
+                  <label>Document Type</label>
+                  <select>
+                    <option value="" disabled selected>Select type</option>
+                    <option value="drawings">Engineering Drawings</option>
+                    <option value="boq">Bill of Quantities</option>
+                    <option value="specs">Technical Specifications</option>
+                    <option value="mixed">Mixed / Multiple</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <button class="submit-docs-btn" (click)="submitDocuments()">
+              Send to Proqyur Team
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2674,78 +2736,4 @@
     (closeModal)="closeServiceModal()"
   ></app-service-modal>
 
-  <footer class="footer-main-wrapper">
-    <div class="footer-main-content">
-      <div class="footer-content-container">
-        <div class="footer-left-container">
-          <div class="footer-locations-col">
-            <div class="footer-brand-section">
-              <div class="footer-brand-name">Proqyur</div>
-              <p class="footer-brand-description">One manufacturing partner for everything your project needs. Own facilities in Kalakal, Cherlapally & Maheshwaram. 27+ iconic projects. Pan-India delivery.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-right-container">
-          <div class="footer-nav-columns">
-            <div class="footer-links-col">
-              <h4>PRODUCTS</h4>
-              <ul>
-                <li><a href="#">Structural Steel & PEB</a></li>
-                <li><a href="#">Railway Infrastructure</a></li>
-                <li><a href="#">Highway & Bridges</a></li>
-                <li><a href="#">Furniture & Interiors</a></li>
-                <li><a href="#">Doors, Windows & Facades</a></li>
-                <li><a href="#">Electrical & Data Centre</a></li>
-                <li><a href="#">CNC & Precision Parts</a></li>
-                <li><a href="#">Mechanical & Industrial</a></li>
-                <li><a href="#">Stone & Hardscaping</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-links-col">
-              <h4>SECTORS</h4>
-              <ul>
-                <li><a href="#">Pharma & Laboratories</a></li>
-                <li><a href="#">Railways & Highways</a></li>
-                <li><a href="#">Hospitality & Resorts</a></li>
-                <li><a href="#">Commercial & Malls</a></li>
-                <li><a href="#">Data Centres</a></li>
-                <li><a href="#">Residential & Villas</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-links-col">
-              <h4>COMPANY</h4>
-              <ul>
-                <li><a href="#">Why Proqyur</a></li>
-                <li><a href="#">How We Work</a></li>
-                <li><a href="#">Our Numbers</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="footer-newsletter-inline">
-            <h3>Join our newsletter</h3>
-            <p>Stay up to date with the latest news, announcements, and articles.</p>
-            <div class="newsletter-form">
-              <input type="email" placeholder="Business Email*" class="newsletter-input">
-              <button class="newsletter-button">Subscribe</button>
-            </div>
-            <p class="newsletter-disclaimer">By signing up, you agree to our Terms of Use and Privacy Policy. We may use the info you submit to contact you and use data from third parties to personalize your experience.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom-bar">
-      <div class="footer-bottom-container">
-        <div class="footer-copyright">
-          <p>© 2026 Proqyur. All rights reserved. Hyderabad, Telangana.</p>
-        </div>
-
-      </div>
-    </div>
-  </footer>
 </div>

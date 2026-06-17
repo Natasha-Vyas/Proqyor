@@ -9,7 +9,7 @@
           <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
           <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
         </ul>
-        <button class="nav-cta-btn" routerLink="/contact">
+        <button class="nav-cta-btn" (click)="goToQuote()">
           Get Instant Quote
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -19,31 +19,44 @@
     </div>
   </nav>
 
+  <app-ticker></app-ticker>
+
   <main class="main-content">
     <router-outlet />
   </main>
 
   <footer class="footer">
-    <div class="footer-ticker">
-      <div class="ticker-track">
-        <span>Structural Steel & PEB</span><span class="ticker-dot">·</span>
-        <span>Railway Infrastructure</span><span class="ticker-dot">·</span>
-        <span>Highways & Bridges</span><span class="ticker-dot">·</span>
-        <span>Furniture & Interiors</span><span class="ticker-dot">·</span>
-        <span>Electrical & Data Centre</span><span class="ticker-dot">·</span>
-        <span>CNC Precision Parts</span><span class="ticker-dot">·</span>
-        <span>Doors & Facades</span><span class="ticker-dot">·</span>
-        <span>Stone & Hardscaping</span><span class="ticker-dot">·</span>
-        <span>Structural Steel & PEB</span><span class="ticker-dot">·</span>
-        <span>Railway Infrastructure</span><span class="ticker-dot">·</span>
-        <span>Highways & Bridges</span><span class="ticker-dot">·</span>
-        <span>Furniture & Interiors</span><span class="ticker-dot">·</span>
-        <span>Electrical & Data Centre</span><span class="ticker-dot">·</span>
-        <span>CNC Precision Parts</span><span class="ticker-dot">·</span>
-        <span>Doors & Facades</span><span class="ticker-dot">·</span>
-        <span>Stone & Hardscaping</span><span class="ticker-dot">·</span>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Proqyur" class="footer-logo">
+        <p class="footer-tagline">Your One Stop Manufacturing & Procurement Partner</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a routerLink="/home">Home</a>
+        <a routerLink="/contact">Contact</a>
+        <a (click)="goToQuote()" class="footer-link-btn">Request Quote</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Divisions</h4>
+        <span>Structural Steel & PEB</span>
+        <span>Railway Infrastructure</span>
+        <span>Highways & Bridges</span>
+        <span>CNC Precision Parts</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+919391419708">+91 93914 19708</a>
+        <a href="mailto:info@proqyur.com">info&#64;proqyur.com</a>
+        <span>Kalakal · Cherlapally · Maheshwaram</span>
       </div>
     </div>
-    <p>&copy; 2026 PROQYUR. All rights reserved.</p>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 PROQYUR. All rights reserved.</p>
+    </div>
   </footer>
 </div>

@@ -1,0 +1,30 @@
+<div class="ticker">
+  <div class="ticker-label">
+    <span class="live-dot"></span>
+    Market Rates
+  </div>
+  <div class="ticker-overflow">
+    <div class="ticker-track">
+      @for (c of commodities; track c.id) {
+        <div class="tc">
+          <span class="tc-name">{{ c.name }}</span>
+          <span class="tc-val">₹{{ getVal(c).toFixed(1) }}</span>
+          <span class="tc-unit">{{ c.unit }}</span>
+          <span class="tc-chg" [class.up]="isUp(c)" [class.dn]="!isUp(c)">
+            {{ isUp(c) ? '▲' : '▼' }}{{ getDelta(c) | number:'1.2-2' | slice:((getDelta(c) < 0) ? 1 : 0) }}
+          </span>
+        </div>
+      }
+      @for (c of commodities; track c.id) {
+        <div class="tc">
+          <span class="tc-name">{{ c.name }}</span>
+          <span class="tc-val">₹{{ getVal(c).toFixed(1) }}</span>
+          <span class="tc-unit">{{ c.unit }}</span>
+          <span class="tc-chg" [class.up]="isUp(c)" [class.dn]="!isUp(c)">
+            {{ isUp(c) ? '▲' : '▼' }}{{ getDelta(c) | number:'1.2-2' | slice:((getDelta(c) < 0) ? 1 : 0) }}
+          </span>
+        </div>
+      }
+    </div>
+  </div>
+</div>

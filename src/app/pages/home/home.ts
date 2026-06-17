@@ -138,6 +138,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     alert('Thank you! Our team will review your documents and get back within 24 hours.');
   }
 
+  scrollToQuote() {
+    const el = document.getElementById('quote-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {

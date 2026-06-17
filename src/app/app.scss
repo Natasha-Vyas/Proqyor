@@ -137,58 +137,79 @@
 }
 
 .footer {
-  background: #1a1a2e;
+  background: #0f0a1e;
   color: white;
-  text-align: center;
-  padding: 1.5rem 2rem 2rem;
   margin-top: auto;
-  overflow: hidden;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.footer-brand {
+  .footer-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  .footer-tagline {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    max-width: 250px;
+  }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  h4 {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  a, span {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: default;
+  }
+
+  a {
+    cursor: pointer;
+
+    &:hover {
+      color: #a78bfa;
+    }
+  }
+
+  .footer-link-btn {
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.25rem 2rem;
+  text-align: center;
 
   p {
     margin: 0;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
-
-.footer-ticker {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 1.25rem;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-}
-
-.ticker-track {
-  display: flex;
-  gap: 0;
-  animation: tickerScroll 25s linear infinite;
-  width: max-content;
-  white-space: nowrap;
-
-  span {
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
-    letter-spacing: 0.02em;
-    padding: 0 0.5rem;
-  }
-
-  .ticker-dot {
-    color: #7C3AED;
-    font-weight: 700;
-    font-size: 1rem;
-  }
-}
-
-@keyframes tickerScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track {
-    animation: none;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -200,6 +221,10 @@
 
   .nav-links {
     gap: 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -223,5 +248,11 @@
   .nav-cta-btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem 2rem;
   }
 }
