@@ -119,6 +119,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
 
+  activeFlowStep = 1;
+  private flowInterval: any = null;
+  private flowPaused = false;
   activeDivisionPopup: string | null = null;
 
   openDivisionPopup(division: string) {
@@ -138,9 +141,25 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
-    // Set up visibility change listener to resume videos when tab becomes visible
     this.visibilityChangeHandler = () => this.handleVisibilityChange();
     document.addEventListener('visibilitychange', this.visibilityChangeHandler);
+    this.startFlowCycle();
+  }
+
+  startFlowCycle() {
+    this.flowInterval = setInterval(() => {
+      if (!this.flowPaused) {
+        this.activeFlowStep = this.activeFlowStep >= 6 ? 1 : this.activeFlowStep + 1;
+      }
+    }, 3000);
+  }
+
+  pauseFlowCycle() {
+    this.flowPaused = true;
+  }
+
+  resumeFlowCycle() {
+    this.flowPaused = false;
   }
 
   ngAfterViewInit() {
@@ -151,9 +170,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // Clean up event listener
     if (this.visibilityChangeHandler) {
       document.removeEventListener('visibilitychange', this.visibilityChangeHandler);
+    }
+    if (this.flowInterval) {
+      clearInterval(this.flowInterval);
     }
   }
 
