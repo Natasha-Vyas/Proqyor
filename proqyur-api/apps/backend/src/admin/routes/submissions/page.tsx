@@ -73,8 +73,7 @@ const SubmissionsPage = () => {
         {fileList.map((file, i) => {
           const isUrl = file.startsWith("http")
           if (isUrl) {
-            const fileName = file.split("/").pop() || `File ${i + 1}`
-            const downloadUrl = file.replace(/\/files\//, "/files/") + "/download"
+            const downloadUrl = file + "/download"
             return (
               <div key={i} style={{ display: "flex", gap: "8px", alignItems: "center" }}>
                 <a
@@ -91,7 +90,6 @@ const SubmissionsPage = () => {
                 >
                   Download
                 </a>
-                <Text size="small" style={{ color: "#6b7280" }}>{fileName}</Text>
               </div>
             )
           }
