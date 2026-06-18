@@ -455,10 +455,18 @@
   }
 
   .contact-left h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .contact-left p {
+    font-size: 0.9rem;
   }
 
   .contact-form {
     padding: 1.25rem;
+  }
+
+  .floating-badges {
+    display: none;
   }
 }
