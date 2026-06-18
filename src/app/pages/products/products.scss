@@ -518,11 +518,51 @@
 }
 
 @media (max-width: 768px) {
+  .products-hero {
+    padding: 3rem 1.25rem 2rem;
+  }
+
   .products-hero-content h1 {
     font-size: 1.75rem;
   }
 
+  .products-hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .products-body {
+    padding: 1.25rem;
+  }
+
   .products-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-hero {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .products-hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .products-body {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .quote-popup {
+    padding: 1.25rem;
   }
 }
