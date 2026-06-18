@@ -20,5 +20,8 @@ module.exports = defineConfig({
     {
       resolve: './src/modules/submission',
     },
+    {
+      resolve: './src/modules/file-upload',
+    },
   ],
 })

@@ -185,34 +185,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.docSubmitting) return;
     this.docSubmitting = true;
 
-    const files = this.uploadedFiles.length > 0
-      ? this.uploadedFiles.map(f => f.name).join(', ')
-      : 'No files attached';
-
-    // Fire-and-forget: Formspark
-    this.http.post('https://submit-form.com/1izYfVt9E', {
-      _subject: 'Document Submission - Proqyur',
-      company: this.docForm.company,
-      contactPerson: this.docForm.contactPerson,
-      phone: this.docForm.phone,
-      documentType: this.docForm.docType,
-      files
-    }, { headers: { Accept: 'application/json' }, responseType: 'text' as 'json' }).subscribe();
-
-    // Fire-and-forget: Medusa
-    this.medusa.submitForm({
-      type: 'document',
-      company: this.docForm.company,
-      contact_person: this.docForm.contactPerson,
-      phone: this.docForm.phone,
-      document_type: this.docForm.docType,
-      files
-    }).subscribe();
-
-    // Fire-and-forget: file upload (if any)
-    if (this.uploadedFiles.length > 0) {
-      this.medusa.uploadFiles(this.uploadedFiles).subscribe();
-    }
+    const formData = { ...this.docForm };
+    const filesToUpload = [...this.uploadedFiles];
 
     // Show success immediately
     this.docSubmitting = false;
@@ -222,6 +196,42 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       this.docSubmitted = false;
       this.docForm = { company: '', contactPerson: '', phone: '', docType: '' };
     }, 5000);
+
+    // Background: upload files then submit with URLs
+    if (filesToUpload.length > 0) {
+      this.medusa.uploadFiles(filesToUpload).subscribe({
+        next: (res: any) => {
+          const fileUrls = res.files.map((f: any) => f.url).join(', ');
+          this.sendDocInBackground(formData, fileUrls);
+        },
+        error: () => {
+          const fileNames = filesToUpload.map(f => f.name).join(', ');
+          this.sendDocInBackground(formData, fileNames);
+        }
+      });
+    } else {
+      this.sendDocInBackground(formData, 'No files attached');
+    }
+  }
+
+  private sendDocInBackground(formData: typeof this.docForm, files: string) {
+    this.http.post('https://submit-form.com/1izYfVt9E', {
+      _subject: 'Document Submission - Proqyur',
+      company: formData.company,
+      contactPerson: formData.contactPerson,
+      phone: formData.phone,
+      documentType: formData.docType,
+      files
+    }, { headers: { Accept: 'application/json' }, responseType: 'text' as 'json' }).subscribe();
+
+    this.medusa.submitForm({
+      type: 'document',
+      company: formData.company,
+      contact_person: formData.contactPerson,
+      phone: formData.phone,
+      document_type: formData.docType,
+      files
+    }).subscribe();
   }
 
   scrollToQuote() {

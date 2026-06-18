@@ -41,6 +41,6 @@ export async function POST(req: MedusaRequest, res: MedusaResponse) {
 
 export async function GET(req: MedusaRequest, res: MedusaResponse) {
   const submissionService = req.scope.resolve(SUBMISSION_MODULE)
-  const submissions = await submissionService.listSubmissions()
+  const submissions = await submissionService.listSubmissions({}, { order: { created_at: 'DESC' } })
   res.json({ submissions })
 }
