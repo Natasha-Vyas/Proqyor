@@ -2676,7 +2676,14 @@
           <div class="submit-form-card">
             <h3>Submit Your Documents</h3>
 
-            <div class="drop-zone">
+            <div class="drop-zone" [class.drag-over]="isDragOver"
+              (dragover)="onDragOver($event)"
+              (dragleave)="onDragLeave($event)"
+              (drop)="onDrop($event)"
+              (click)="fileInput.click()">
+              <input type="file" #fileInput multiple hidden
+                accept=".pdf,.dwg,.dxf,.xls,.xlsx,.jpg,.jpeg,.png"
+                (change)="onFileSelect($event)">
               <svg viewBox="0 0 24 24" fill="none" class="drop-icon"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <p>Drag & Drop Files Here</p>
               <span>or click to select files from your computer</span>
@@ -2689,27 +2696,36 @@
                 <span class="file-badge">PNG</span>
               </div>
             </div>
+            <div class="uploaded-files" *ngIf="uploadedFiles.length">
+              <div class="uploaded-file" *ngFor="let file of uploadedFiles; let i = index">
+                <span class="file-name">{{ file.name }}</span>
+                <span class="file-size">{{ (file.size / 1024).toFixed(0) }} KB</span>
+                <button class="file-remove" (click)="removeFile(i); $event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+            </div>
 
-            <div class="form-fields">
+            <div class="form-fields" *ngIf="!docSubmitted">
               <div class="form-row-split">
                 <div class="form-field-mini">
                   <label>Company Name</label>
-                  <input type="text" placeholder="ABC Infrastructure Ltd">
+                  <input type="text" [(ngModel)]="docForm.company" placeholder="ABC Infrastructure Ltd">
                 </div>
                 <div class="form-field-mini">
                   <label>Contact Person</label>
-                  <input type="text" placeholder="Rajesh Kumar">
+                  <input type="text" [(ngModel)]="docForm.contactPerson" placeholder="Rajesh Kumar">
                 </div>
               </div>
               <div class="form-row-split">
                 <div class="form-field-mini">
                   <label>Phone / WhatsApp</label>
-                  <input type="tel" placeholder="+91 98765 XXXXX">
+                  <input type="tel" [(ngModel)]="docForm.phone" placeholder="+91 98765 XXXXX">
                 </div>
                 <div class="form-field-mini">
                   <label>Document Type</label>
-                  <select>
-                    <option value="" disabled selected>Select type</option>
+                  <select [(ngModel)]="docForm.docType">
+                    <option value="" disabled>Select type</option>
                     <option value="drawings">Engineering Drawings</option>
                     <option value="boq">Bill of Quantities</option>
                     <option value="specs">Technical Specifications</option>
@@ -2720,10 +2736,15 @@
               </div>
             </div>
 
-            <button class="submit-docs-btn" (click)="submitDocuments()">
-              Send to Proqyur Team
-              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <button class="submit-docs-btn" (click)="submitDocuments()" *ngIf="!docSubmitted" [disabled]="docSubmitting">
+              {{ docSubmitting ? 'Sending...' : 'Send to Proqyur Team' }}
+              <svg *ngIf="!docSubmitting" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
+
+            <div class="doc-success-message" *ngIf="docSubmitted">
+              <svg viewBox="0 0 24 24" fill="none" class="success-icon"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <p>Thank you! Our team will review your documents and get back within 24 hours.</p>
+            </div>
           </div>
         </div>
       </div>

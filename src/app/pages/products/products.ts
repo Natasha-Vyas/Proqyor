@@ -2,7 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
+import { MedusaService } from '../../services/medusa.service';
 
 interface Product {
   sku: string;
@@ -53,8 +55,10 @@ export class ProductsComponent implements OnInit, OnDestroy {
   searchQuery = '';
   filteredCategories: CategoryGroup[] = [];
   private routeSub!: Subscription;
+  quoteSubmitted = false;
+  quoteSubmitting = false;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private medusa: MedusaService) {}
 
   ngOnInit() {
     this.routeSub = this.route.paramMap.subscribe(params => {
@@ -136,8 +140,40 @@ export class ProductsComponent implements OnInit, OnDestroy {
   }
 
   submitQuote() {
-    alert(`Quote request sent for ${this.quoteProduct?.name}! Our team will respond within 24 hours.`);
+    if (this.quoteSubmitting) return;
+    this.quoteSubmitting = true;
+
+    // Fire-and-forget: Formspark
+    this.http.post('https://submit-form.com/1izYfVt9E', {
+      _subject: `Quote Request: ${this.quoteProduct?.name}`,
+      product: this.quoteProduct?.name,
+      sku: this.quoteProduct?.sku,
+      company: this.quoteForm.company,
+      contactPerson: this.quoteForm.contactPerson,
+      phone: this.quoteForm.phone,
+      quantity: this.quoteForm.quantity,
+      notes: this.quoteForm.notes
+    }, { headers: { Accept: 'application/json' }, responseType: 'text' as 'json' }).subscribe();
+
+    // Fire-and-forget: Medusa
+    this.medusa.submitForm({
+      type: 'product_quote',
+      product: this.quoteProduct?.name,
+      sku: this.quoteProduct?.sku,
+      company: this.quoteForm.company,
+      contact_person: this.quoteForm.contactPerson,
+      phone: this.quoteForm.phone,
+      quantity: this.quoteForm.quantity,
+      notes: this.quoteForm.notes
+    }).subscribe();
+
+    // Show success immediately
+    this.quoteSubmitting = false;
+    this.quoteSubmitted = true;
     this.quoteForm = { company: '', contactPerson: '', phone: '', quantity: '', notes: '' };
-    this.closeQuotePopup();
+    setTimeout(() => {
+      this.quoteSubmitted = false;
+      this.closeQuotePopup();
+    }, 3000);
   }
 }

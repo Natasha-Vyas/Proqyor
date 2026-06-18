@@ -385,6 +385,18 @@
   animation: slideIn 0.3s ease;
 }
 
+.error-message {
+  padding: 1rem 1.25rem;
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  animation: slideIn 0.3s ease;
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;

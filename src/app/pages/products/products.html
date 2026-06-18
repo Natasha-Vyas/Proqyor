@@ -98,7 +98,7 @@
       <p *ngIf="quoteProduct.material">{{ quoteProduct.material }} · {{ quoteProduct.grade }}</p>
     </div>
 
-    <form class="quote-form" (ngSubmit)="submitQuote()">
+    <form class="quote-form" (ngSubmit)="submitQuote()" *ngIf="!quoteSubmitted">
       <div class="quote-form-row">
         <div class="quote-field">
           <label>Company Name</label>
@@ -123,10 +123,15 @@
         <label>Specifications / Notes</label>
         <textarea [(ngModel)]="quoteForm.notes" name="notes" rows="3" placeholder="Any specific dimensions, grade, delivery location, timeline..."></textarea>
       </div>
-      <button type="submit" class="quote-submit-btn">
-        Send Quote Request
-        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <button type="submit" class="quote-submit-btn" [disabled]="quoteSubmitting">
+        {{ quoteSubmitting ? 'Sending...' : 'Send Quote Request' }}
+        <svg *ngIf="!quoteSubmitting" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </form>
+    <div class="quote-success" *ngIf="quoteSubmitted">
+      <svg viewBox="0 0 24 24" fill="none" class="quote-success-icon"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h4>Quote Request Sent!</h4>
+      <p>Our team will respond within 24 hours.</p>
+    </div>
   </div>
 </div>

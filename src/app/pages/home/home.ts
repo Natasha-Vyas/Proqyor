@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef } from '@angula
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { MedusaService } from '../../services/medusa.service';
 import { ServiceModalComponent } from '../service-detail/service-modal';
 
 @Component({
@@ -134,8 +136,92 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     document.body.style.overflow = '';
   }
 
+  uploadedFiles: File[] = [];
+  isDragOver = false;
+  docSubmitted = false;
+  docForm = { company: '', contactPerson: '', phone: '', docType: '' };
+
+  onDragOver(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isDragOver = true;
+  }
+
+  onDragLeave(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isDragOver = false;
+  }
+
+  onDrop(event: DragEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.isDragOver = false;
+    if (event.dataTransfer?.files) {
+      this.addFiles(event.dataTransfer.files);
+    }
+  }
+
+  onFileSelect(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files) {
+      this.addFiles(input.files);
+    }
+  }
+
+  addFiles(fileList: FileList) {
+    for (let i = 0; i < fileList.length; i++) {
+      this.uploadedFiles.push(fileList[i]);
+    }
+  }
+
+  removeFile(index: number) {
+    this.uploadedFiles.splice(index, 1);
+  }
+
+  docSubmitting = false;
+
   submitDocuments() {
-    alert('Thank you! Our team will review your documents and get back within 24 hours.');
+    if (this.docSubmitting) return;
+    this.docSubmitting = true;
+
+    const files = this.uploadedFiles.length > 0
+      ? this.uploadedFiles.map(f => f.name).join(', ')
+      : 'No files attached';
+
+    // Fire-and-forget: Formspark
+    this.http.post('https://submit-form.com/1izYfVt9E', {
+      _subject: 'Document Submission - Proqyur',
+      company: this.docForm.company,
+      contactPerson: this.docForm.contactPerson,
+      phone: this.docForm.phone,
+      documentType: this.docForm.docType,
+      files
+    }, { headers: { Accept: 'application/json' }, responseType: 'text' as 'json' }).subscribe();
+
+    // Fire-and-forget: Medusa
+    this.medusa.submitForm({
+      type: 'document',
+      company: this.docForm.company,
+      contact_person: this.docForm.contactPerson,
+      phone: this.docForm.phone,
+      document_type: this.docForm.docType,
+      files
+    }).subscribe();
+
+    // Fire-and-forget: file upload (if any)
+    if (this.uploadedFiles.length > 0) {
+      this.medusa.uploadFiles(this.uploadedFiles).subscribe();
+    }
+
+    // Show success immediately
+    this.docSubmitting = false;
+    this.docSubmitted = true;
+    this.uploadedFiles = [];
+    setTimeout(() => {
+      this.docSubmitted = false;
+      this.docForm = { company: '', contactPerson: '', phone: '', docType: '' };
+    }, 5000);
   }
 
   scrollToQuote() {
@@ -143,7 +229,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private http: HttpClient, private medusa: MedusaService) {}
 
   ngOnInit() {
     this.visibilityChangeHandler = () => this.handleVisibilityChange();

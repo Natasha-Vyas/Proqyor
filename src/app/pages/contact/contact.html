@@ -99,15 +99,18 @@
           ></textarea>
         </div>
 
-        <button type="submit" class="submit-btn" [disabled]="!isFormValid()">
-          Send Enquiry
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button type="submit" class="submit-btn" [disabled]="!isFormValid() || submitting">
+          {{ submitting ? 'Sending...' : 'Send Enquiry' }}
+          <svg *ngIf="!submitting" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
 
         <div class="success-message" *ngIf="submitted">
           ✓ Thank you! We'll respond with a quote within 24 hours.
+        </div>
+        <div class="error-message" *ngIf="submitError">
+          Something went wrong. Please try again or contact us directly.
         </div>
       </form>
     </div>

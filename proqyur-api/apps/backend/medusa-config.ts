@@ -17,5 +17,8 @@ module.exports = defineConfig({
     {
       resolve: './src/modules/quote',
     },
+    {
+      resolve: './src/modules/submission',
+    },
   ],
 })
