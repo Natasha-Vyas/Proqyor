@@ -1,0 +1,132 @@
+<div class="products-page" *ngIf="family">
+  <div class="products-hero">
+    <div class="products-hero-content">
+      <span class="products-label">PRODUCT CATALOGUE</span>
+      <h1>{{ family.title }}</h1>
+      <p>{{ family.description }}</p>
+      <div class="products-stats">
+        <span class="stat">{{ totalProducts }} Products</span>
+        <span class="stat-dot">·</span>
+        <span class="stat">{{ family.categories.length }} Categories</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-body">
+    <aside class="products-sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <ng-container *ngFor="let cat of family.categories">
+          <li
+            [class.active]="activeCategory === cat.name && !activeSubcategory"
+            (click)="filterByCategory(cat.name)">
+            <span class="cat-name">{{ cat.name }}</span>
+            <span class="cat-count">{{ cat.products.length }}</span>
+          </li>
+          <ul class="subcategory-list" *ngIf="getSubcategories(cat).length > 1">
+            <li *ngFor="let sub of getSubcategories(cat)" class="subcat-item"
+              [class.active]="activeCategory === cat.name && activeSubcategory === sub.name"
+              (click)="filterBySubcategory(cat, sub.name)">
+              <span class="subcat-name">{{ sub.name }}</span>
+              <span class="subcat-count">{{ sub.products.length }}</span>
+            </li>
+          </ul>
+        </ng-container>
+      </ul>
+    </aside>
+
+    <main class="products-grid-area">
+      <div *ngFor="let cat of filteredCategories" class="category-section">
+        <h2 class="category-title">{{ cat.name }}</h2>
+        <div *ngFor="let sub of getSubcategories(cat)" class="subcategory-section">
+          <h3 class="subcategory-title">{{ sub.name }}</h3>
+          <div class="products-grid">
+          <div *ngFor="let p of sub.products" class="product-card">
+            <div class="product-card-header">
+              <span class="product-sku">{{ p.sku }}</span>
+              <h4>{{ p.name }}</h4>
+            </div>
+            <div class="product-card-specs">
+              <div class="spec-row" *ngIf="p.material">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">{{ p.material }}</span>
+              </div>
+              <div class="spec-row" *ngIf="p.grade">
+                <span class="spec-label">Grade</span>
+                <span class="spec-value">{{ p.grade }}</span>
+              </div>
+              <div class="spec-row" *ngIf="p.standards">
+                <span class="spec-label">Standards</span>
+                <span class="spec-value">{{ p.standards }}</span>
+              </div>
+              <div class="spec-row" *ngIf="p.dimensions">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value">{{ p.dimensions }}</span>
+              </div>
+              <div class="spec-row" *ngIf="p.thickness">
+                <span class="spec-label">Thickness</span>
+                <span class="spec-value">{{ p.thickness }}</span>
+              </div>
+              <div class="spec-row" *ngIf="p.finish">
+                <span class="spec-label">Finish</span>
+                <span class="spec-value">{{ p.finish }}</span>
+              </div>
+            </div>
+            <p class="product-desc" *ngIf="p.description">{{ p.description }}</p>
+            <button class="quote-btn" (click)="openQuotePopup(p)">
+              Request Quote
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Quote Popup -->
+<div class="quote-overlay" *ngIf="quoteProduct" (click)="closeQuotePopup()">
+  <div class="quote-popup" (click)="$event.stopPropagation()">
+    <button class="quote-close" (click)="closeQuotePopup()">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="quote-popup-header">
+      <span class="quote-popup-sku">{{ quoteProduct.sku }}</span>
+      <h3>{{ quoteProduct.name }}</h3>
+      <p *ngIf="quoteProduct.material">{{ quoteProduct.material }} · {{ quoteProduct.grade }}</p>
+    </div>
+
+    <form class="quote-form" (ngSubmit)="submitQuote()">
+      <div class="quote-form-row">
+        <div class="quote-field">
+          <label>Company Name</label>
+          <input type="text" [(ngModel)]="quoteForm.company" name="company" placeholder="ABC Infrastructure Ltd" required>
+        </div>
+        <div class="quote-field">
+          <label>Contact Person</label>
+          <input type="text" [(ngModel)]="quoteForm.contactPerson" name="contactPerson" placeholder="Rajesh Kumar" required>
+        </div>
+      </div>
+      <div class="quote-form-row">
+        <div class="quote-field">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" [(ngModel)]="quoteForm.phone" name="phone" placeholder="+91 98765 XXXXX" required>
+        </div>
+        <div class="quote-field">
+          <label>Quantity Required</label>
+          <input type="text" [(ngModel)]="quoteForm.quantity" name="quantity" placeholder="e.g. 500 nos / 2 MT">
+        </div>
+      </div>
+      <div class="quote-field">
+        <label>Specifications / Notes</label>
+        <textarea [(ngModel)]="quoteForm.notes" name="notes" rows="3" placeholder="Any specific dimensions, grade, delivery location, timeline..."></textarea>
+      </div>
+      <button type="submit" class="quote-submit-btn">
+        Send Quote Request
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+</div>

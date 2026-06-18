@@ -4,12 +4,32 @@
       <a routerLink="/home" class="logo">
         <img src="logo.png" alt="Proqyur" class="logo-img">
       </a>
-      <div class="nav-right">
+
+      <button class="hamburger" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-right" [class.mobile-open]="mobileMenuOpen">
         <ul class="nav-links">
-          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-          <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+          <li><a routerLink="/home" routerLinkActive="active" (click)="closeMobileMenu()">Home</a></li>
+          <li class="nav-dropdown">
+            <a class="dropdown-trigger" (click)="productsExpanded = !productsExpanded">Products
+              <svg viewBox="0 0 24 24" fill="none" class="chevron" [class.expanded]="productsExpanded"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="dropdown-menu" [class.mobile-expanded]="productsExpanded">
+              <a (click)="navigateToProduct('material-supply')">Material Supply</a>
+              <a (click)="navigateToProduct('fabricated-items')">Fabricated Items</a>
+              <a (click)="navigateToProduct('epc-installation')">EPC & Installation</a>
+              <a (click)="navigateToProduct('aluminium-doors-windows')">Aluminium Doors & Windows</a>
+              <a (click)="navigateToProduct('upvc-doors-windows')">uPVC Doors & Windows</a>
+              <a (click)="navigateToProduct('sanitary-ware')">Sanitary Ware</a>
+            </div>
+          </li>
+          <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a></li>
         </ul>
-        <button class="nav-cta-btn" (click)="goToQuote()">
+        <button class="nav-cta-btn" (click)="goToQuote(); closeMobileMenu()">
           Get Instant Quote
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

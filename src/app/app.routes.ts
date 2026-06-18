@@ -33,5 +33,10 @@ export const routes: Routes = [
   {
     path: 'service/:id',
     loadComponent: () => import('./pages/service-detail/service-detail').then(m => m.ServiceDetailComponent)
+  },
+  {
+    path: 'products/:family',
+    loadComponent: () => import('./pages/products/products').then(m => m.ProductsComponent),
+    runGuardsAndResolvers: 'paramsChange'
   }
 ];
