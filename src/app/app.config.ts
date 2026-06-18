@@ -1,11 +1,18 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling, withComponentInputBinding, withRouterConfig } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
+    provideHttpClient(),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({ scrollPositionRestoration: 'top' }),
+      withComponentInputBinding(),
+      withRouterConfig({ paramsInheritanceStrategy: 'always', onSameUrlNavigation: 'reload' })
+    )
   ]
 };
